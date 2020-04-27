@@ -31,6 +31,8 @@ body {
   position: relative;
   display: flex;
   justify-content: center;
+
+  overflow: hidden;
 }
 
 .video-container::before {
@@ -45,12 +47,4 @@ body {
   background-color: rgba(7, 8, 21, 0.85);
   background-color: rgba(29, 19, 31, 0.9);
   /*background-color: rgba(19, 13, 21, 0.85);*/
-}
-
-.video {
-  /* NOT CURRENTLY BEING USED */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
