@@ -10,29 +10,29 @@ const Header = () => {
         <span className={headerStyles.title}>Heidi Tsai</span>
         <span className={headerStyles.subtitle}>Historical Keyboardist</span>
       </Link>
-      <ul>
-        <li>
+      <ul className={headerStyles.navList}>
+        <li className={headerStyles.navItem}>
           <Link to="/about" className={headerStyles.link}>
             {" "}
             about
           </Link>
         </li>
 
-        <li>
+        <li className={headerStyles.navItem}>
           <Link to="/coaching" className={headerStyles.link}>
             {" "}
             coaching
           </Link>
         </li>
 
-        <li>
+        <li className={headerStyles.navItem}>
           <Link to="/discography" className={headerStyles.link}>
             {" "}
             discography
           </Link>
         </li>
 
-        <li>
+        <li className={headerStyles.navItem}>
           <Link to="/contact" className={headerStyles.link}>
             {" "}
             contact
