@@ -2,7 +2,8 @@ $black: #333;
 $gold: #f8b407;
 
 nav {
-  padding: 1rem 2rem;
+  /* THE NAV IS OVERFLOWING. WHYYYYYYYY */
+  padding: 2rem 1rem;
 
   display: flex;
   justify-content: space-between;
@@ -53,6 +54,7 @@ nav {
   margin: 0;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navItem {
