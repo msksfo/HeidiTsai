@@ -3,11 +3,11 @@ $gold: #f8b407;
 
 .header {
   /* positioning works but not z-index. content is flowing over the top */
-
+  /*
   position: sticky;
   top: 0;
   z-index: 100;
-
+*/
   padding: 2rem 1rem;
 
   display: flex;
