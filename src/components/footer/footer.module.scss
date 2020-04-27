@@ -5,4 +5,43 @@
   background-color: #1d131f;
 
   /*background-color: #130d15;*/
+
+  color: white;
+  position: relative;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.footerNavRight,
+.footerNavLeft {
+  /*border: 1px solid white;*/
+  list-style-type: none;
+  padding: 0;
+}
+
+.navItem {
+}
+
+.link {
+  color: #fbfbfb;
+  display: block;
+  text-decoration: none;
+  /*border: 1px solid orange;*/
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1rem;
+  color: rgba(255, 255, 255, 0.6);
 }
