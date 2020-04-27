@@ -1,21 +1,68 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { Component } from "react"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import YouTube from "react-youtube"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+import Layout from "../components/layout/layout"
+
+//import Image from "../components/image"
+//import SEO from "../components/seo"
+
+import indexStyles from "../styles/index.module.scss"
+import landingPageVideo from "../assets/videos/backgroundVideo.mp4"
+import landingPagePoster from "../assets/images/videoStill.png"
+
+// https://youtu.be/e3StH0KLKR4  heidi youtube video
+// https://www.youtube.com/watch?v=e3StH0KLKR4
+
+class IndexPage extends Component {
+  _onReady(event) {
+    event.target.mute()
+    event.target.play()
+  }
+
+  _onEnd(event) {
+    event.target.playVideo()
+  }
+
+  render() {
+    const videoOptions = {
+      playerVars: {
+        autoplay: 0,
+        controls: 0,
+        rel: 0,
+        showinfo: 0,
+      },
+    }
+
+    return (
+      <div>
+        <Layout>
+          {/*  <SEO title="Home" /> */}
+
+          <div className={indexStyles.videoContainer}>
+            {/*
+        <video style={{ width: "auto" }} autoplay muted loop controls>
+          <source src={landingPageVideo} type='"video/mp4'></source>
+        </video>
+      */}
+            {/*
+            <YouTube
+              className={indexStyles.video}
+              videoId="e3StH0KLKR4"
+              opt={videoOptions}
+              onReady={this.onReady}
+              onEnd={this.onEnd}
+            />
+          */}
+
+            <video loop muted poster={landingPagePoster}>
+              <source src={landingPageVideo} type="video/mp4" />
+            </video>
+          </div>
+        </Layout>
+      </div>
+    )
+  }
+}
 
 export default IndexPage
