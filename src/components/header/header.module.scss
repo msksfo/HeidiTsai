@@ -1,9 +1,22 @@
 $black: #333;
 $gold: #f8b407;
 
-nav {
-  /* THE NAV IS OVERFLOWING. WHYYYYYYYY */
+.header {
+  /* positioning works but not z-index. content is flowing over the top */
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
   padding: 2rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerNav {
+  /*padding: 2rem 1rem;*/
 
   display: flex;
   justify-content: space-between;
@@ -11,6 +24,9 @@ nav {
 
   /* get rid of this becaus you should not need it */
   flex-wrap: wrap;
+
+  /* mobile  first*/
+  display: none;
 }
 
 .logo {
@@ -92,4 +108,22 @@ nav {
 
 .link:hover::after {
   transform: scaleX(1);
+}
+
+.navToggle:checked ~ .headerNav {
+  display: flex;
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .navToggle {
+    display: none;
+  }
+
+  .headerNav {
+    display: flex;
+  }
 }
