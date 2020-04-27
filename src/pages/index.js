@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 
-import YouTube from "react-youtube"
-
 import Layout from "../components/layout/layout"
 
 //import Image from "../components/image"
@@ -55,7 +53,7 @@ class IndexPage extends Component {
             />
           */}
 
-            <video loop muted poster={landingPagePoster}>
+            <video autoPlay loop muted poster={landingPagePoster}>
               <source src={landingPageVideo} type="video/mp4" />
             </video>
           </div>
