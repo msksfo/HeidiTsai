@@ -1,0 +1,70 @@
+.wrapper {
+  border-top: 1px solid black;
+  padding: 3rem 1rem;
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.titleQuote {
+  font-size: 3rem;
+  position: relative;
+  order: 1;
+  color: rgba(29, 19, 31, 0.8);
+
+  quotes: '"';
+}
+
+.titleQuote::before {
+  content: open-quote;
+
+  display: block;
+  margin-bottom: -2rem;
+  font-size: 5rem;
+}
+
+.titleQuote::after {
+  content: "~ The Guardian";
+  display: block;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  color: rgba(29, 19, 31, 0.75);
+}
+
+.titleImage {
+  flex-basis: 400px;
+  order: 0;
+}
+
+.sectionDividerImage {
+  padding: 100px 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #fbfbfb;
+}
+.harpsichordImage {
+  /*transform: rotate(90deg);*/
+  max-width: 100%;
+  display: block;
+}
+
+.sectionContent {
+  display: flex;
+}
+
+.aboutText {
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 800px) {
+  .wrapper {
+    padding: 3rem 2rem;
+  }
+  .sectionTitle {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
