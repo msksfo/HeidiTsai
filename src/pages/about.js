@@ -18,11 +18,11 @@ const AboutPage = () => (
     <Layout>
       <section className={aboutStyles.wrapper}>
         <div className={aboutStyles.sectionTitle}>
-          <div className={aboutStyles.titleQuote}>
+          <blockquote className={aboutStyles.titleQuote}>
             Heidi Tsai gave the fortepiano luscious beauty of tone. Her
             fingering was admirable, close to perfection. Her keen sense of
             musicality catches surprising twists of the phrases.
-          </div>
+          </blockquote>
 
           <div className={aboutStyles.titleImage}>
             <img alt="Heidi" src={heidi1} />
