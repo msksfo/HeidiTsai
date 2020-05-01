@@ -1,5 +1,4 @@
 $black: #333;
-$gold: #f8b407;
 $red: #b10f2e;
 
 .header {
@@ -17,8 +16,6 @@ $red: #b10f2e;
 }
 
 .headerNav {
-  /*padding: 2rem 1rem;*/
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,19 +35,15 @@ $red: #b10f2e;
   color: black;
 }
 
-.logo:hover .title {
-  color: $gold;
+.logo:hover .title,
+.logo:focus .title {
   color: $red;
-  /*color: #993366;*/
 }
 
 .title {
   font-size: 2rem;
   margin-bottom: 0.3rem;
 
-  color: #56395f;
-  color: #3a2640;
-  /*color: #39263f;*/
   color: $black;
 
   text-transform: uppercase;
@@ -61,7 +54,6 @@ $red: #b10f2e;
 
 .subtitle {
   font-size: 1.4rem;
-  color: #39263f;
   color: $black;
   transition: color 0.2s ease-in;
 }
@@ -101,14 +93,14 @@ $red: #b10f2e;
   width: 100%;
   height: 2.25px;
 
-  background-color: #993366;
   background-color: $red;
 
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
 
-.link:hover::after {
+.link:hover::after,
+.link:focus::after {
   transform: scaleX(1);
 }
 
