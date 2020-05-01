@@ -3,8 +3,6 @@ $red: #b10f2e;
 
 .wrapper {
   padding: 5rem 1rem;
-
-  background-color: $purple;
   background-color: #111;
 
   color: white;
@@ -47,13 +45,14 @@ $red: #b10f2e;
 
   height: 2px;
 
-  background-color: $red;
+  background-color: #fbfbfb;
   opacity: 0.85;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
 
-.link:hover::after {
+.link:hover::after,
+.link:focus::after {
   transform: scaleX(1);
 }
 
