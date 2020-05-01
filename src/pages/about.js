@@ -112,16 +112,9 @@ const AboutPage = () => (
               <li className={aboutStyles.image}>
                 <img className={aboutStyles.aboutImage} src={heidi2} alt="" />
               </li>
-
-              <li className={aboutStyles.image}>
-                <img className={aboutStyles.aboutImage} src={heidi5} alt="" />
-              </li>
-
-              <li className={aboutStyles.image}>
-                <img className={aboutStyles.aboutImage} src={heidi3} alt="" />
-              </li>
             </ul>
           </div>
+          <div className={aboutStyles.clearFix}></div>
         </div>
       </section>
     </Layout>

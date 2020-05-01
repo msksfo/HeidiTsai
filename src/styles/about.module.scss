@@ -38,7 +38,7 @@ $red: #b10f2e;
   display: block;
   /*
   margin-bottom: -7.5rem;
-  font-size: 11.25rem;
+  font-size: 11.25rem
   opacity: 0.3;
     */
 
@@ -79,26 +79,68 @@ $red: #b10f2e;
 /* ======================================================= */
 
 .sectionContent {
+  /*
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 2fr;
   gap: 20px;
+    */
 
   background-color: #fbfbfb;
+
   padding: 2rem;
+
+  /* i want this parent to stick */
+  /*
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+
+  height: 400px;
+  overflow: scroll;
+  */
+
+  /*
+  max-height: 100vh;
+  overflow: scroll;
+  */
 }
 
 .aboutText {
   line-height: 1.6;
   font-size: 1.2rem;
+
+  float: left;
+  width: 70%;
+
+  /* i want this content only to scroll (not the images) */
+  /*
+  height: 100%;
+  overflow: scroll;
+  background-color: lightskyblue;
+  */
+
+  /*
+  height: 100%;
+  overflow: scroll;
+  */
+}
+
+.clearFix {
+  content: "";
+  clear: both;
 }
 
 .sectionImages {
   display: flex;
   flex-direction: column;
-}
 
-.aboutImage {
-  max-width: 100%;
+  float: right;
+  width: 30%;
+
+  /*  USE INTERSECTION OBSERVER API
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  */
 }
 
 .imageList {
@@ -115,6 +157,11 @@ $red: #b10f2e;
   border: 2px solid black;
   padding: 1rem;
   background-color: white;
+}
+
+/* this is the image */
+.aboutImage {
+  max-width: 100%;
 }
 
 @media screen and (min-width: 850px) {
