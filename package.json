@@ -5,6 +5,7 @@
   "version": "2.20.36",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "^2.20.35",
     "gatsby-image": "^2.3.5",
     "gatsby-plugin-manifest": "^2.3.7",
@@ -12,11 +13,8 @@
     "gatsby-plugin-react-helmet": "^3.2.5",
     "gatsby-plugin-sass": "^2.2.4",
     "gatsby-plugin-sharp": "^2.5.7",
-    
     "gatsby-remark-images": "^3.2.6",
-    
     "gatsby-source-filesystem": "^2.2.5",
-    
     "gatsby-transformer-sharp": "^2.4.7",
     "node-sass": "^4.14.0",
     "prop-types": "^15.7.2",

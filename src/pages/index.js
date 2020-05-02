@@ -16,7 +16,7 @@ class IndexPage extends Component {
   render() {
     return (
       <div>
-        <Layout>
+        <Layout page="home">
           {/*  <SEO title="Home" /> */}
 
           <div className={indexStyles.videoContainer}>

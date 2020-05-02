@@ -10,15 +10,18 @@ import React from "react"
 //import { useStaticQuery, graphql } from "gatsby"
 
 import layoutStyles from "./layout.module.scss"
+
 import Header from "../header/header"
 import Footer from "../footer/footer"
 
 const Layout = props => {
   return (
     <div className={layoutStyles.wrapper}>
-      <Header />
+      <Header page={props.page} />
 
-      <main className={layoutStyles.main}>{props.children}</main>
+      <div className={layoutStyles.mainWrapperInner}>
+        <main className={layoutStyles.main}>{props.children}</main>
+      </div>
 
       <Footer />
     </div>

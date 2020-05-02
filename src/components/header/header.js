@@ -1,10 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+import cs from "classnames"
 import headerStyles from "../header/header.module.scss"
 
-const Header = () => {
+const Header = props => {
   return (
-    <header className={headerStyles.header}>
+    <header
+      className={cs(headerStyles.header, {
+        [headerStyles.homePageHeader]: props.page === "home",
+      })}
+    >
       <Link to="/" className={(headerStyles.link, headerStyles.logo)}>
         {" "}
         <span className={headerStyles.title}>Heidi Tsai</span>
