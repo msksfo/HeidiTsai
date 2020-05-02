@@ -19,7 +19,7 @@ const Layout = props => {
     <div className={layoutStyles.wrapper}>
       <Header page={props.page} />
 
-      <div className={layoutStyles.mainWrapperInner}>
+      <div className={layoutStyles.mainWrapper}>
         <main className={layoutStyles.main}>{props.children}</main>
       </div>
 
