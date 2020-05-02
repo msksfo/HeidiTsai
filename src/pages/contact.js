@@ -14,7 +14,7 @@ const ContactPage = () => (
     <Layout>
       <div className={contactStyles.wrapper}>
         <div className={contactStyles.formWrapper}>
-          <HeidiInfo phoneNumber="111-222-3333" email="heidi@something.com" />
+          <HeidiInfo />
 
           <ContactForm />
         </div>
