@@ -60,68 +60,135 @@
   }
 }
 
-/* <p> explaining embodied creativity */
-.aboutSection {
-  padding: 2rem;
-}
-
+/*======== About Section ===========*/
 .aboutCoachingWrapper {
   max-width: 800px;
   margin: 0 auto;
+  padding: 1rem;
 }
 
+/* ==== the paragraph explaining embodied creativity ==== */
 .aboutCoachingText {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
+/* ==================*/
+
 .coachingSessionWrapper {
+  /*
   max-width: 800px;
   margin: 0 auto;
-
   padding: 50px 50px 65px;
+*/
+
+  max-width: 800px;
+  margin: 0 auto;
   border: 1px solid purple;
+
+  /*border: 4px double #bbb;*/
   margin-bottom: 2rem;
 
+  /*
   display: flex;
   justify-content: center;
   align-items: center;
+*/
 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+/* the <ul> showing the list of prices */
+.priceList {
+  padding-left: 1rem;
+}
+
+.sessionBackground {
+  height: 500px;
+  width: 100%;
+  max-width: 350px;
   position: relative;
 }
 
 .innerArtistBackground {
-  height: 475px;
-  width: 300px;
   background-color: #745be6;
-  position: relative;
+
+  background-color: #b12554;
 }
 
 .professionalArtistBackground {
-  height: 475px;
-  width: 300px;
   background-color: #f7cc11;
-  position: relative;
+}
+
+.deeperConnectionsBackground {
+  background-color: #0d9951;
+
+  background-color: #2511b1;
+}
+
+.session {
+  position: absolute;
+  padding: 0.5rem;
+  height: 500px;
+  width: 100%;
+  /*transform: translate(20px, 20px);*/
+  line-height: 1.4;
+  font-size: 1.2rem;
+
+  transform: translateY(20px);
 }
 
 .innerArtistSession {
-  position: absolute;
-  padding: 1rem;
   background-color: #d5cdf8e1;
-  height: 475px;
-  width: 300px;
-  transform: translate(20px, 20px);
-  line-height: 1.4;
-  font-size: 1.2rem;
+
+  background-color: rgba(251, 235, 240, 0.9);
 }
 
 .professionalSession {
-  position: absolute;
-  padding: 1rem;
   background-color: #f7f1d7cc;
-  height: 475px;
-  width: 300px;
-  transform: translate(20px, 20px);
-  line-height: 1.4;
-  font-size: 1.2rem;
+}
+
+.deeperConnectionsSession {
+  background-color: #c0eed6d5;
+
+  background-color: #e9e6fd;
+  background-color: rgba(233, 230, 253, 0.85);
+}
+
+@media (min-width: 500px) {
+  .coachingSessionWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 0 65px;
+  }
+
+  .sessionBackground::before {
+    content: attr(data-sessionType);
+    position: absolute;
+    top: 1.3rem;
+    left: -2.5rem;
+    width: max-content;
+    /*border: 1px solid green;*/
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .session {
+    transform: translate(20px, 20px);
+  }
+
+  /* this is the <h2> */
+  .sessionType {
+    display: none;
+  }
 }
