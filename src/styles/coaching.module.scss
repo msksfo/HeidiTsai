@@ -1,0 +1,127 @@
+.heroImageContainer {
+  background-image: url("../assets/images/abstractArtBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* not currently being used */
+.heroTextContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  background: linear-gradient(to top, transparent, rgba(37, 17, 177, 0.8));
+  /*background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));*/
+}
+
+.heroText {
+  margin: 0;
+  font-size: 3rem;
+  padding: 50px 1rem;
+
+  width: 100%;
+  text-align: center;
+
+  background: linear-gradient(to bottom, transparent, rgba(37, 17, 177, 0.4));
+
+  color: white;
+
+  /*color: #2511b1;*/
+}
+
+.creativitySpan {
+  color: #b10f6f;
+
+  opacity: 0;
+  font-size: 3.5rem;
+  animation: fadeIn 2.5s ease-out 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* <p> explaining embodied creativity */
+.aboutSection {
+  padding: 2rem;
+}
+
+.aboutCoachingWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.aboutCoachingText {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.coachingSessionWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+
+  padding: 50px 50px 65px;
+  border: 1px solid purple;
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.innerArtistBackground {
+  height: 475px;
+  width: 300px;
+  background-color: #745be6;
+  position: relative;
+}
+
+.professionalArtistBackground {
+  height: 475px;
+  width: 300px;
+  background-color: #f7cc11;
+  position: relative;
+}
+
+.innerArtistSession {
+  position: absolute;
+  padding: 1rem;
+  background-color: #d5cdf8e1;
+  height: 475px;
+  width: 300px;
+  transform: translate(20px, 20px);
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
+
+.professionalSession {
+  position: absolute;
+  padding: 1rem;
+  background-color: #f7f1d7cc;
+  height: 475px;
+  width: 300px;
+  transform: translate(20px, 20px);
+  line-height: 1.4;
+  font-size: 1.2rem;
+}
