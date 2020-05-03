@@ -20,7 +20,9 @@ const CoachingPage = () => (
 
         <section className={coachingStyles.aboutSection}>
           <div className={coachingStyles.aboutCoachingWrapper}>
-            <h1>What is Embodied Creativity?</h1>
+            <h1 className={coachingStyles.titleHeader}>
+              What is Embodied Creativity?
+            </h1>
             <p className={coachingStyles.aboutCoachingText}>
               Embodied Creativity is a practice for those who choose to dedicate
               their life to creativity and play in each moment; or for
