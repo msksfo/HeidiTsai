@@ -20,6 +20,23 @@ const ContactForm = () => {
       </p>
 
       <p>
+        <label for="subject">Subject:</label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          list="subjects"
+          placeholder="(optional)"
+        />
+        <datalist id="subjects">
+          <option>Embodied Creativity</option>
+          <option>Piano / Harpsichord lessons</option>
+          <option>Book Heidi for a private event</option>
+          <option>Book Heidi & Nabi for a private event</option>
+        </datalist>
+      </p>
+
+      <p>
         <label for="phone">
           Phone:
           <input type="tel" id="phone" name="phone" placeholder="(optional)" />
