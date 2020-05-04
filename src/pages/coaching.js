@@ -167,11 +167,10 @@ const CoachingPage = () => (
                 )}
               >
                 <p>
-                  Accompanied practices, custom designed exercises to enable
-                  performances without medication, exploration on perfection,
-                  compliments, and criticisms, working with the ego instead of
-                  being controlled by it, recurring dreams, sustainable,
-                  self-regulated lifestyle.
+                  An online, self-paced course working to deepen the connection
+                  with ourselves, those near us, and the experiences from our
+                  past. 21 lessons with guided audio meditation and affirmative
+                  journaling for self regulation.
                 </p>
                 <details>
                   <summary>Pricing Information</summary>
