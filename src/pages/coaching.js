@@ -1,5 +1,5 @@
 import React from "react"
-
+import Head from "../components/head"
 import Layout from "../components/layout/layout"
 import cs from "classnames"
 import coachingStyles from "../styles/coaching.module.scss"
@@ -8,7 +8,8 @@ import coachingStyles from "../styles/coaching.module.scss"
 
 const CoachingPage = () => (
   <div>
-    <Layout>
+    <Layout pageTitle="Coaching">
+      <Head title="Coaching" />
       <div className={coachingStyles.wrapper}>
         <div className={coachingStyles.heroImageContainer}>
           <h1 className={coachingStyles.heroText}>

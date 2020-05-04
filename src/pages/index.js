@@ -5,6 +5,7 @@ import Layout from "../components/layout/layout"
 //import Image from "../components/image"
 //import SEO from "../components/seo"
 
+import Head from "../components/head"
 import indexStyles from "../styles/index.module.scss"
 import landingPageVideo from "../assets/videos/backgroundVideo.mp4"
 import landingPagePoster from "../assets/images/videoStill.png"
@@ -18,6 +19,7 @@ class IndexPage extends Component {
       <div>
         <Layout page="home">
           {/*  <SEO title="Home" /> */}
+          <Head title="Home" />
 
           <div className={indexStyles.videoContainer}>
             <video autoPlay loop muted poster={landingPagePoster}>

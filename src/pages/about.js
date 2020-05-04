@@ -1,5 +1,5 @@
 import React from "react"
-
+import Head from "../components/head"
 import Layout from "../components/layout/layout"
 import aboutStyles from "../styles/about.module.scss"
 
@@ -16,6 +16,7 @@ import keyboard from "../assets/images/keyboard.jpg"
 const AboutPage = () => (
   <div>
     <Layout>
+      <Head title="About" />
       <section className={aboutStyles.wrapper}>
         <div className={aboutStyles.sectionTitle}>
           <blockquote className={aboutStyles.titleQuote}>
