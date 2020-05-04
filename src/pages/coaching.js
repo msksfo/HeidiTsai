@@ -34,7 +34,7 @@ const CoachingPage = () => (
               recurring dreams. Creativity is the essence of our vitality, a
               constant wealth to enrich our existence. Let’s tap deeper into
               this resource and release our life purpose. Leave a request for a
-              1-on-1 session by going to "making contact".
+              1-on-1 session by filling out the form on the contact page.
             </p>
           </div>
 
