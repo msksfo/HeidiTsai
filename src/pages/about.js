@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout/layout"
 import aboutStyles from "../styles/about.module.scss"
+
 import heidi1 from "../assets/images/heidi1.jpg"
 import heidi2 from "../assets/images/heidi2.jpg"
 import heidi5 from "../assets/images/heidi5.jpg"
