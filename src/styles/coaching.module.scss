@@ -51,10 +51,7 @@ $lightBlue: rgba(233, 230, 253, 0.85);
 
 .creativitySpan {
   color: #b10f6f;
-
-  opacity: 0;
   font-size: 3.5rem;
-  animation: fadeIn 2.5s ease-out 1s forwards;
 }
 
 @keyframes fadeIn {
@@ -244,8 +241,12 @@ $lightBlue: rgba(233, 230, 253, 0.85);
   }
 }
 
-@media (min-width: 825px) {
-  // 800???
+@media (min-width: 850px) {
+  .creativitySpan {
+    opacity: 0;
+    animation: fadeIn 2.5s ease-out 1s forwards;
+  }
+
   .coachingSessionWrapper {
     flex-direction: row;
     align-items: flex-start;
