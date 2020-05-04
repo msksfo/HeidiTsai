@@ -1,3 +1,10 @@
+$pink: #b12554;
+$lightPink: rgba(251, 235, 240, 0.9);
+$yellow: #f7cc11;
+$lightYellow: #f7f1d7cc;
+$blue: #2511b1;
+$lightBlue: rgba(233, 230, 253, 0.85);
+
 .heroImageContainer {
   background-image: url("../assets/images/abstractArtBackground.jpg");
   background-size: cover;
@@ -73,6 +80,7 @@
 
 .titleHeader {
   margin-bottom: 1.4rem;
+  font-size: 1.7rem;
 }
 
 .titleHeader::after {
@@ -94,24 +102,12 @@
 /* ==================*/
 
 .coachingSessionWrapper {
-  /*
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px 50px 65px;
-*/
-
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   border: 1px solid purple;
 
   /*border: 4px double #bbb;*/
   margin-bottom: 2rem;
-
-  /*
-  display: flex;
-  justify-content: center;
-  align-items: center;
-*/
 
   display: flex;
   flex-direction: column;
@@ -125,35 +121,34 @@
   padding-left: 1rem;
 }
 
+/* the solid colored div */
 .sessionBackground {
   height: 500px;
   width: 100%;
   max-width: 350px;
   position: relative;
+  margin-bottom: 4rem;
 }
 
 .innerArtistBackground {
-  background-color: #745be6;
-
-  background-color: #b12554;
+  background-color: $pink;
 }
 
 .professionalArtistBackground {
-  background-color: #f7cc11;
+  background-color: $yellow;
 }
 
 .deeperConnectionsBackground {
-  background-color: #0d9951;
-
-  background-color: #2511b1;
+  background-color: $blue;
 }
 
+/* the lighter colored div translated to the right and down */
 .session {
   position: absolute;
   padding: 0.5rem;
   height: 500px;
   width: 100%;
-  /*transform: translate(20px, 20px);*/
+
   line-height: 1.4;
   font-size: 1.2rem;
 
@@ -161,29 +156,68 @@
 }
 
 .innerArtistSession {
-  background-color: #d5cdf8e1;
-
-  background-color: rgba(251, 235, 240, 0.9);
+  background-color: $lightPink;
 }
 
 .professionalSession {
-  background-color: #f7f1d7cc;
+  background-color: $lightYellow;
 }
 
 .deeperConnectionsSession {
-  background-color: #c0eed6d5;
+  background-color: $lightBlue;
+}
 
-  background-color: #e9e6fd;
-  background-color: rgba(233, 230, 253, 0.85);
+.testimonialsList {
+  list-style-type: none;
+  padding: 0 1rem;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+/* ==== the testimonials list ===== */
+
+.testimonialsList li::after {
+  content: "";
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #cecece 50%,
+    #cecece 50%,
+    #ffffff 100%
+  );
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonialsList li:last-of-type::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.testimonialsList figure {
+  margin: 0 0 2rem;
+  margin-bottom: 0; // get rid of this after sorting out the pseudo element divider
+  font-size: 1.2rem;
+  line-height: 1.3;
+  color: #222;
+  text-align: center;
+}
+
+/* the person's name */
+.testimonialsList figcaption {
+  margin-top: 0.3rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.75);
 }
 
 @media (min-width: 500px) {
   .coachingSessionWrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
     padding: 50px 0 65px;
   }
 
@@ -191,12 +225,11 @@
     content: attr(data-sessionType);
     position: absolute;
     top: 1.3rem;
-    left: -2.5rem;
+    left: -2.6rem;
     width: max-content;
-    /*border: 1px solid green;*/
     transform: rotate(270deg) translateX(-100%);
     transform-origin: top left;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: bold;
     letter-spacing: 1px;
   }
@@ -208,5 +241,25 @@
   /* this is the <h2> */
   .sessionType {
     display: none;
+  }
+}
+
+@media (min-width: 825px) {
+  // 800???
+  .coachingSessionWrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .sessionBackground {
+    margin-bottom: 0;
+    flex-basis: 100%;
+  }
+
+  .testimonialsList {
+    margin: 0;
+    padding: 0;
+    flex-basis: 30%;
   }
 }
