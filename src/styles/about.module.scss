@@ -27,10 +27,6 @@ $red: #b10f2e;
   max-width: 800px;
   margin: 0;
   text-align: center;
-  transform: translateY(40px);
-  opacity: 0;
-
-  animation: slideUp 2s forwards 0.5s, fadeIn 2s forwards 0.5s;
 }
 
 .titleQuote::before {
@@ -50,6 +46,12 @@ $red: #b10f2e;
   color: rgba(29, 19, 31, 0.75);
 }
 
+.titleImage {
+  flex-basis: 400px;
+  order: 0;
+}
+
+/*  hero image and quote animations not triggered until 850px breakpoint */
 @keyframes slideUp {
   0% {
     transform: translateY(40px);
@@ -68,9 +70,19 @@ $red: #b10f2e;
   }
 }
 
-.titleImage {
-  flex-basis: 400px;
-  order: 0;
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  5% {
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(0);
+    visibility: visible;
+  }
 }
 
 /* =================== not being used =================== */
@@ -190,10 +202,18 @@ $red: #b10f2e;
 
   .titleQuote {
     text-align: left;
+    transform: translateY(40px);
+    opacity: 0;
+    animation: slideUp 2s ease-in-out forwards 0.5s,
+      fadeIn 2s ease-in forwards 0.5s;
   }
 
   .titleImage {
     margin-bottom: 0;
     margin-right: 3rem;
+
+    transform: translateX(-100%);
+    visibility: hidden;
+    animation: slideIn 1.5s forwards ease-out 0.5s;
   }
 }
