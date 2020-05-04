@@ -63,8 +63,8 @@ const CoachingPage = () => (
                   <summary>Pricing Information</summary>
                   <ul className={coachingStyles.priceList}>
                     <li>One time 20-minute free online consultation</li>
-                    <li>1 hour: 100 Euros</li>
-                    <li>Package of 5 sessions (recommended): 450 Euros</li>
+                    <li>1 hour: &euro;100</li>
+                    <li>Package of 5 sessions (recommended): &euro;450</li>
                   </ul>
                 </details>
               </div>
@@ -118,8 +118,8 @@ const CoachingPage = () => (
                   <summary>Pricing Information</summary>
                   <ul className={coachingStyles.priceList}>
                     <li>One time 20-minute free online consultation</li>
-                    <li>1 hour: 100 Euros</li>
-                    <li>Package of 5 sessions (recommended): 450 Euros</li>
+                    <li>1 hour: &euro;100</li>
+                    <li>Package of 5 sessions (recommended): &euro;450</li>
                   </ul>
                 </details>
               </div>
@@ -175,7 +175,7 @@ const CoachingPage = () => (
                 </p>
                 <details>
                   <summary>Pricing Information</summary>
-                  <p>Suggested donation: ​ 50-60 euros</p>
+                  <p>Suggested donation: ​ &euro;50-60</p>
                 </details>
               </div>
             </div>
