@@ -9,7 +9,6 @@ $lightBlue: rgba(233, 230, 253, 0.85);
   max-width: 1100px;
 
   margin: 0 auto;
-  border: 1px solid purple;
 
   margin-bottom: 2rem;
 
@@ -69,6 +68,7 @@ $lightBlue: rgba(233, 230, 253, 0.85);
 /* ======== MEDIA QUERIES ========= */
 @media (min-width: 500px) {
   .coachingSessionWrapper {
+    border: 1px solid purple;
     padding: 50px 0 65px;
   }
 
