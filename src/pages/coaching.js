@@ -1,8 +1,9 @@
 import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout/layout"
-import cs from "classnames"
+
 import coachingStyles from "../styles/coaching.module.scss"
+import CoachingSession from "../components/coachingSession/coachingSession"
 
 //import SEO from "../components/seo"
 
@@ -38,6 +39,40 @@ const CoachingPage = () => (
               1-on-1 session by filling out the form on the contact page.
             </p>
           </div>
+
+          <CoachingSession
+            sessionType="For the Artist in Us"
+            artistBackground="innerArtistBackground"
+            sessionBackground="innerArtistSession"
+            sessionDescription="Guided meditation, custom-designed assignment (physical and writing)
+            to establish self-regulated learning in your chosen creative voices
+            (music, art, dance, writing, painting, etc), discussion and
+            exploration of your unique creative connection and contribution to
+            the world."
+          />
+
+          <CoachingSession
+            sessionType="For Professionals"
+            artistBackground="professionalArtistBackground"
+            sessionBackground="professionalSession"
+            sessionDescription="Accompanied practices, custom designed exercises to enable
+                  performances without medication, exploration on perfection,
+                  compliments, and criticisms, working with the ego instead of
+                  being controlled by it, recurring dreams, sustainable,
+                  self-regulated lifestyle."
+          />
+
+          <CoachingSession
+            sessionType="A Gift of Deeper Connections"
+            artistBackground="deeperConnectionsBackground"
+            sessionBackground="deeperConnectionsSession"
+            sessionDescription="An online, self-paced course working to deepen the connection
+                  with ourselves, those near us, and the experiences from our
+                  past. 21 lessons with guided audio meditation and affirmative
+                  journaling for self regulation."
+          />
+
+          {/* 
           <div className={coachingStyles.coachingSessionWrapper}>
             <h2 className={coachingStyles.sessionType}>For the Artist in Us</h2>
             <div
@@ -71,6 +106,7 @@ const CoachingPage = () => (
               </div>
             </div>{" "}
             {/* close sessionBackgound */}
+          {/*
             <ul className={coachingStyles.testimonialsList}>
               <li>
                 <figure>
@@ -93,6 +129,9 @@ const CoachingPage = () => (
             </ul>
           </div>{" "}
           {/* close coachingSessionWrapper */}
+
+          {/* 
+
           <div className={coachingStyles.coachingSessionWrapper}>
             <h2 className={coachingStyles.sessionType}>For Professionals</h2>
             <div
@@ -150,6 +189,9 @@ const CoachingPage = () => (
               </li>
             </ul>
           </div>
+                */}
+
+          {/*
           <div className={coachingStyles.coachingSessionWrapper}>
             <h2 className={coachingStyles.sessionType}>
               A Gift of Deeper Connections
@@ -202,6 +244,7 @@ const CoachingPage = () => (
               </li>
             </ul>
           </div>
+                */}
         </section>
       </div>
     </Layout>

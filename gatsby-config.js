@@ -3,6 +3,14 @@ module.exports = {
     title: `Heidi Tsai ~ Historical Keyboardist`,
     description: `This is the website for Heidi Tsai, historical keyboardist based in France.`,
     author: `Heidi Tsai`,
+    keywords: [
+      "pianist",
+      "harpsichordist",
+      "early music",
+      "classical music",
+      "embodied creativity",
+      "guided meditation",
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
