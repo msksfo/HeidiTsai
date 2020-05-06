@@ -20,11 +20,9 @@ class ContactForm extends Component {
   }
 
   encode(data) {
-    return Object.keys(data).map(key => {
-      return (
-        encodeURIComponent(key) + "=" + encodeURIComponent(data[key]).join("&")
-      )
-    })
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
   }
 
   handleChange(e) {
@@ -37,6 +35,7 @@ class ContactForm extends Component {
     e.preventDefault()
 
     const form = e.target
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
