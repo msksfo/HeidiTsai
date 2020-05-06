@@ -31,14 +31,6 @@ const CoachingSession = props => {
               listStyle="priceListStyle"
               listType={props.priceList}
             />
-
-            {/*
-            <ul className={coachingSessionStyles.priceList}>
-              <li>One time 20-minute free online consultation</li>
-              <li>1 hour: &euro;100</li>
-              <li>Package of 5 sessions (recommended): &euro;450</li>
-            </ul>
-            */}
           </details>
         </div>
       </div>
@@ -47,29 +39,6 @@ const CoachingSession = props => {
         listStyle="testimonialsList"
         listType={props.testimonialsList}
       />
-
-      {/*
-      <ul className={coachingSessionStyles.testimonialsList}>
-        <li>
-          <figure>
-            "I would recommend it to anybody. There are valuable takeaways for
-            everyone."
-            <figcaption>Gary / teacher - Naperville, USA</figcaption>
-          </figure>
-        </li>
-
-        <li>
-          <figure>
-            "It has significantly opened my mind, heart, eyes and ears to my
-            surroundings, the people around me, my feelings, desires, words and
-            actions..."
-            <figcaption>
-              Merrie / German and ESL trainer - Hanau, Germany
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      */}
     </div>
   )
 }
