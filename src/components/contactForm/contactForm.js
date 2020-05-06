@@ -16,6 +16,15 @@ class ContactForm extends Component {
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.encode = this.encode.bind(this)
+  }
+
+  encode(data) {
+    return Object.keys(data).map(key => {
+      return (
+        encodeURIComponent(key) + "=" + encodeURIComponent(data[key]).join("&")
+      )
+    })
   }
 
   handleChange(e) {
@@ -26,15 +35,15 @@ class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    const form = e.target;
-    fetch('/', {
-      method: 'POST',
-      headers: {"Content-Type": "application/x-www-form-urlencoded"},
-      body: encode({ "form-name": "contact", ...this.state})
-    })
-    .then(() => navigate(form.getAttribute('action'))
-    .catch((error) => alert(error))
 
+    const form = e.target
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ "form-name": "contact", ...this.state }),
+    }).then(() =>
+      navigate(form.getAttribute("action")).catch(error => alert(error))
+    )
   }
 
   render() {
