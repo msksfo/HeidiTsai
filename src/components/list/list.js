@@ -6,6 +6,7 @@ const UnorderedList = props => {
   let listItems
 
   /* logic to determine what type of list is being passed in 
+    - the price list is an array of strings
 
     - The testimonials list is an array of arrays. The nested array has two string values: one for the figure, the other for the figcaption
 
@@ -18,7 +19,7 @@ const UnorderedList = props => {
       return (
         <li key={value[1]}>
           <figure>
-            {value[0]}
+            <q>{value[0]}</q>
             <figcaption>{value[1]}</figcaption>
           </figure>
         </li>
