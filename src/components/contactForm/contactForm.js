@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import contactFormStyles from "./contactForm.module.scss"
 import { navigate } from "gatsby"
 
-// THIS NEEDS TO BE A CLASS COMPONENT SO IT CAN HOLD STATE FOR THE FORM
+/* ======== refactor this to use React.useState({}) =========== */
 class ContactForm extends Component {
   constructor() {
     super()
@@ -19,6 +19,12 @@ class ContactForm extends Component {
     this.encode = this.encode.bind(this)
   }
 
+  /* 
+    Encode function is from the Netlify blog post on integrating a netlify form into a react app, form handling with a stateful react form.
+
+    https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#step-2
+
+  */
   encode(data) {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
