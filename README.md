@@ -7,8 +7,8 @@ This is the website I created for Heidi Tsai, historical keyboardist based in Fr
 ## Getting Started
 
 - clone or download the repo
-- cd into your project directory and install all project dependencies with npm install
-- run npm start to start the development server
+- cd into your project directory and install all project dependencies with `npm install`
+- run `npm start` to start the development server
 - the site is now live at http://localhost:8000
 
 ## Credits
