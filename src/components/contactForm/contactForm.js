@@ -37,6 +37,7 @@ class ContactForm extends Component {
       >
         {/* this extra input is needed when using netlify forms */}
         <input type="hidden" name="form-name" value="contct" />
+        <input type="hidden" name="bot-field" />
 
         <p>
           <label htmlFor="name">
