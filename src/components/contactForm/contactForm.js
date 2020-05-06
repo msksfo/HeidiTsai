@@ -27,6 +27,7 @@ class ContactForm extends Component {
 
   handleChange(e) {
     this.setState({
+      ...this.state,
       [e.target.name]: e.target.value,
     })
   }
@@ -40,9 +41,9 @@ class ContactForm extends Component {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this.encode({ "form-name": "contact", ...this.state }),
-    }).then(() =>
-      navigate(form.getAttribute("action")).catch(error => alert(error))
-    )
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch(error => alert(error))
   }
 
   render() {
