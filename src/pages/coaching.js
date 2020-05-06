@@ -1,48 +1,16 @@
 import React from "react"
+
 import Head from "../components/head"
 import Layout from "../components/layout/layout"
+
+import listData from "../data.json"
 
 import coachingStyles from "../styles/coaching.module.scss"
 import CoachingSession from "../components/coachingSession/coachingSession"
 
 //import SEO from "../components/seo"
-const defaultPriceList = [
-  "One time 20-minute free online consultation",
-  "1 hour: 100 Euros",
-  "Package of 5 sessions (recommended): 450 Euros",
-]
 
-const deeperConnectionsPriceList = ["Suggested donation: 50 - 60 Euros"]
-
-const innerArtistTestimonialsList = [
-  [
-    ` "I would recommend it to anybody. There are valuable takeaways for
-            everyone."`,
-    "Gary / teacher - Naperville, USA",
-  ],
-  [
-    `"It has significantly opened my mind, heart, eyes and ears to
-                  my surroundings, the people around me, my feelings, desires,
-                  words and actions..."`,
-    " Merrie / German and ESL trainer - Hanau, Germany",
-  ],
-]
-
-const professionalTestimonialsList = [
-  [
-    `"This is a journey for the whole life, every day! I want to
-                  revisit certain exercises/meditation themes over and over
-                  again, continuously."`,
-    "Teddie H. / flutist, photographer - Germany",
-  ],
-  [
-    `"The idea of doing the same thing with people from all over
-                  the world enhanced the feeling of connection to the world. It
-                  was a fantastic way to start a day."`,
-    "Vaula / baroque dancer, lawyer, harpsichord and life enthusiast - Seattle, USA",
-  ],
-]
-
+/*
 const deeperConnectionsTestimonialsList = [
   [
     ` "I really appreciated this journey, because this was a gift
@@ -59,6 +27,7 @@ const deeperConnectionsTestimonialsList = [
     "Lara Zoe Wild",
   ],
 ]
+*/
 
 const CoachingPage = () => (
   <div>
@@ -102,8 +71,10 @@ const CoachingPage = () => (
             (music, art, dance, writing, painting, etc), discussion and
             exploration of your unique creative connection and contribution to
             the world."
-            priceList={defaultPriceList}
-            testimonialsList={innerArtistTestimonialsList}
+            priceList={listData.priceList.defaultPriceList}
+            testimonialsList={
+              listData.testimonialsList.innerArtistTestimonialsList
+            }
           />
 
           <CoachingSession
@@ -115,8 +86,10 @@ const CoachingPage = () => (
                   compliments, and criticisms, working with the ego instead of
                   being controlled by it, recurring dreams, sustainable,
                   self-regulated lifestyle."
-            priceList={defaultPriceList}
-            testimonialsList={professionalTestimonialsList}
+            priceList={listData.priceList.defaultPriceList}
+            testimonialsList={
+              listData.testimonialsList.professionalTestimonialsList
+            }
           />
 
           <CoachingSession
@@ -127,8 +100,10 @@ const CoachingPage = () => (
                   with ourselves, those near us, and the experiences from our
                   past. 21 lessons with guided audio meditation and affirmative
                   journaling for self regulation."
-            priceList={deeperConnectionsPriceList}
-            testimonialsList={deeperConnectionsTestimonialsList}
+            priceList={listData.priceList.deeperConnectionsPriceList}
+            testimonialsList={
+              listData.testimonialsList.deeperConnectionsTestimonialsList
+            }
           />
 
           {/* 
