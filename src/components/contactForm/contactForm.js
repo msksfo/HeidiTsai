@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import contactFormStyles from "./contactForm.module.scss"
+import { navigate } from "gatsby"
 
 // THIS NEEDS TO BE A CLASS COMPONENT SO IT CAN HOLD STATE FOR THE FORM
 class ContactForm extends Component {
@@ -23,12 +24,24 @@ class ContactForm extends Component {
     })
   }
 
-  handleSubmit(e) {}
+  handleSubmit(e) {
+    e.preventDefault()
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      body: encode({ "form-name": "contact", ...this.state})
+    })
+    .then(() => navigate(form.getAttribute('action'))
+    .catch((error) => alert(error))
+
+  }
 
   render() {
     return (
       <form
         className={contactFormStyles.form}
+        onSubmit={this.handleSubmit}
         name="contact"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
