@@ -35,6 +35,9 @@ class ContactForm extends Component {
         method="post"
         action="/success"
       >
+        {/* this extra input is needed when using netlify forms */}
+        <input type="hidden" name="form-name" value="contct" />
+
         <p>
           <label htmlFor="name">
             Name:
@@ -110,7 +113,9 @@ class ContactForm extends Component {
           </label>
         </p>
 
-        <button className={contactFormStyles.submitButton}>Submit</button>
+        <button type="submit" className={contactFormStyles.submitButton}>
+          Submit
+        </button>
       </form>
     )
   }

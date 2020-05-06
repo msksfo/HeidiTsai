@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout/layout"
 import Head from "../components/head"
 
-const formSubmitted = () => {
+const Success = () => {
   return (
     <div>
       <Layout>
@@ -16,3 +16,5 @@ const formSubmitted = () => {
     </div>
   )
 }
+
+export default Success
