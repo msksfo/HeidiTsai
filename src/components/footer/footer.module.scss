@@ -11,27 +11,26 @@ $red: #b10f2e;
 
 .footerNav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
+  flex-direction: column;
   max-width: 750px;
   margin: 0 auto;
 }
 
+// the <ul>
 .footerNavRight,
 .footerNavLeft {
   list-style-type: none;
   padding: 0;
-}
-
-.navItem {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
 }
 
 .link {
   color: #fbfbfb;
   display: block;
   text-decoration: none;
-
   padding: 10px 10px 4px;
   font-size: 1.2rem;
   margin-bottom: 0.7rem;
@@ -42,9 +41,7 @@ $red: #b10f2e;
   content: "";
   position: relative;
   bottom: -5px;
-
   height: 2px;
-
   background-color: #fbfbfb;
   opacity: 0.85;
   transform: scaleX(0);
@@ -58,9 +55,71 @@ $red: #b10f2e;
 
 .copyright {
   color: rgba(255, 255, 255, 0.6);
-
   display: flex;
   justify-content: center;
   position: relative;
   top: 3rem;
+}
+
+/* ===== social media icons ===== */
+.socialMediaIconsWrapper {
+  display: flex;
+  justify-content: space-around;
+  order: 1;
+  padding: 1.75rem 0;
+}
+
+.socialMediaLink {
+  display: inline-block;
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.socialMediaLink:hover {
+  transform: translateY(-0.2rem);
+}
+
+.facebook {
+  background-color: #1775eb;
+}
+
+.instagram {
+  background: linear-gradient(225deg, #c20097, #fdbb1e);
+}
+
+.soundcloud {
+  background-color: #ff7700;
+}
+
+.youtube {
+  background-color: #e62117;
+}
+
+@media (min-width: 550px) {
+  .footerNav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // the <ul>
+  .footerNavRight,
+  .footerNavLeft {
+    display: block;
+  }
+
+  .socialMediaIconsWrapper {
+    order: 0;
+  }
+
+  .socialMediaLink + .socialMediaLink {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .socialMediaLink + .socialMediaLink {
+    margin-left: 2rem;
+  }
 }
