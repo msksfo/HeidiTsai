@@ -65,7 +65,7 @@ const Footer = () => {
               fixedWidth
               className={footerStyles.instagram}
               aria-hidden="true"
-              title="Facebook"
+              title="Instagram"
             />
           </a>
 
@@ -81,7 +81,7 @@ const Footer = () => {
               fixedWidth
               className={footerStyles.soundcloud}
               aria-hidden="true"
-              title="Facebook"
+              title="Soundcloud"
             />
           </a>
 
@@ -97,7 +97,7 @@ const Footer = () => {
               fixedWidth
               className={footerStyles.youtube}
               aria-hidden="true"
-              title="Facebook"
+              title="YouTube"
             />
           </a>
         </div>
