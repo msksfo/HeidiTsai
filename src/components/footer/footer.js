@@ -36,16 +36,20 @@ const Footer = () => {
         </div>
 
         <div className={footerStyles.socialMediaIconsWrapper}>
+          {/* https://fontawesome.com/how-to-use/on-the-web/other-topics/accessibility */}
           <a
             href="https://www.facebook.com/heidi.tsai.5"
             target="_blank"
             rel="noopener noreferrer"
             className={footerStyles.socialMediaLink}
+            aria-label="Facebook"
           >
             <FontAwesomeIcon
               icon={faFacebookSquare}
               fixedWidth
               className={footerStyles.facebook}
+              aria-hidden="true"
+              title="Facebook"
             />
           </a>
 
@@ -54,11 +58,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={footerStyles.socialMediaLink}
+            aria-label="Instagram"
           >
             <FontAwesomeIcon
               icon={faInstagram}
               fixedWidth
               className={footerStyles.instagram}
+              aria-hidden="true"
+              title="Facebook"
             />
           </a>
 
@@ -67,11 +74,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={footerStyles.socialMediaLink}
+            aria-label="Soundcloud"
           >
             <FontAwesomeIcon
               icon={faSoundcloud}
               fixedWidth
               className={footerStyles.soundcloud}
+              aria-hidden="true"
+              title="Facebook"
             />
           </a>
 
@@ -80,11 +90,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className={footerStyles.socialMediaLink}
+            aria-label="YouTube"
           >
             <FontAwesomeIcon
               icon={faYoutubeSquare}
               fixedWidth
               className={footerStyles.youtube}
+              aria-hidden="true"
+              title="Facebook"
             />
           </a>
         </div>
