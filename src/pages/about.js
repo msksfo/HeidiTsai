@@ -2,11 +2,13 @@ import React from "react"
 import Head from "../components/head"
 import Layout from "../components/layout/layout"
 import aboutStyles from "../styles/about.module.scss"
+import cs from "classnames"
 
 import heidi1 from "../assets/images/heidi1.jpg"
 import heidi2 from "../assets/images/heidi2.jpg"
 import heidi5 from "../assets/images/heidi5.jpg"
 import heidi3 from "../assets/images/heidi3.jpg"
+import heidi4 from "../assets/images/heidi4.jpg"
 
 import harpsichord from "../assets/images/keyboard2.jpg"
 import keyboard from "../assets/images/keyboard.jpg"
@@ -110,12 +112,15 @@ const AboutPage = () => (
 
           <div className={aboutStyles.sectionImages}>
             <ul className={aboutStyles.imageList}>
-              <li className={aboutStyles.image}>
+              <li className={cs(aboutStyles.image, aboutStyles.current)}>
                 <img className={aboutStyles.aboutImage} src={heidi2} alt="" />
+              </li>
+
+              <li className={aboutStyles.image}>
+                <img className={aboutStyles.aboutImage} src={heidi3} alt="" />
               </li>
             </ul>
           </div>
-          <div className={aboutStyles.clearFix}></div>
         </div>
       </section>
     </Layout>

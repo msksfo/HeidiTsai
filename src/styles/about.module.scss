@@ -103,82 +103,52 @@ $red: #b10f2e;
 /* ======================================================= */
 
 .sectionContent {
-  /*
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 20px;
-    */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /* use position relative so position sticky will work on .sectionImages */
+  position: relative;
 
   background-color: #fbfbfb;
-
   padding: 2rem;
-
-  /* i want this parent to stick */
-  /*
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
-
-  height: 400px;
-  overflow: scroll;
-  */
-
-  /*
-  max-height: 100vh;
-  overflow: scroll;
-  */
 }
 
 .aboutText {
   line-height: 1.6;
   font-size: 1.2rem;
-
-  float: left;
-  width: 70%;
-
-  /* i want this content only to scroll (not the images) */
-  /*
-  height: 100%;
-  overflow: scroll;
-  background-color: lightskyblue;
-  */
-
-  /*
-  height: 100%;
-  overflow: scroll;
-  */
-}
-
-.clearFix {
-  content: "";
-  clear: both;
+  flex-basis: 50%;
 }
 
 .sectionImages {
+  /*
   display: flex;
   flex-direction: column;
-
-  float: right;
-  width: 30%;
-
-  /*  USE INTERSECTION OBSERVER API
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
   */
+
+  border: 1px solid purple;
+
+  /*
+  flex-basis: 400px;
+  margin-left: auto;
+*/
 }
 
+/* the <ul> */
 .imageList {
   display: flex;
-  flex-direction: column;
-  /*border: 1px solid red;*/
-  height: 100%;
-  justify-content: space-between;
+
+  border: 1px solid red;
+  display: none;
+  padding: 0;
   list-style-type: none;
+
+  position: relative; // so the li slides can slide
 }
 
 /* this is actually the <li> not the <img> */
 .image {
-  max-width: 400px;
+  /*max-width: 400px;*/
   border: 2px solid black;
   padding: 1rem;
   background-color: white;
@@ -186,10 +156,60 @@ $red: #b10f2e;
 
 /* this is the image */
 .aboutImage {
+  flex-basis: 100%;
   max-width: 100%;
 }
 
-@media screen and (min-width: 850px) {
+@media (min-width: 800px) {
+  .sectionContent {
+    flex-direction: row;
+  }
+
+  .sectionImages {
+    // the sticky div, purple border
+    display: flex;
+    //flex-basis: 400px;
+    margin-left: auto;
+
+    position: sticky;
+    top: 4rem;
+
+    border: none;
+  }
+
+  .imageList {
+    // <ul> => the slider, red border
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    /* must use height/width of image. why not 100%?????? */
+    height: 300px;
+    width: 300px;
+
+    border: none;
+  }
+
+  .image {
+    // the <li>, black border
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .current {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 850px) {
   .wrapper {
     padding: 3rem 2rem;
   }
@@ -215,5 +235,19 @@ $red: #b10f2e;
     transform: translateX(-100%);
     visibility: hidden;
     animation: slideIn 1.5s forwards ease-out 0.5s;
+  }
+}
+
+@media (min-width: 900px) {
+  .imageList {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .imageList {
+    height: 400px;
+    width: 400px;
   }
 }
