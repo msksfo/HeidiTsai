@@ -3,6 +3,8 @@ $red: #b10f2e;
 .wrapper {
   /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
   padding: 3rem 1rem;
+
+  padding: 3rem 0;
 }
 
 .sectionTitle {
@@ -11,6 +13,8 @@ $red: #b10f2e;
   padding-bottom: 3rem;
 
   margin-bottom: 50px;
+
+  padding: 0 1rem 3rem 1rem;
 }
 
 .titleImage {
@@ -111,6 +115,7 @@ $red: #b10f2e;
   position: relative;
 
   background-color: #fbfbfb;
+
   padding: 2rem;
 }
 
@@ -161,6 +166,13 @@ $red: #b10f2e;
 }
 
 @media (min-width: 800px) {
+  .wrapper {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    padding: 0 0 3rem 0;
+  }
   .sectionContent {
     flex-direction: row;
   }
@@ -210,14 +222,16 @@ $red: #b10f2e;
 }
 
 @media (min-width: 850px) {
+  /*
   .wrapper {
     padding: 3rem 2rem;
   }
+  */
+
   .sectionTitle {
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 100px;
-    /*border: 1px solid red;*/
   }
 
   .titleQuote {
@@ -239,6 +253,10 @@ $red: #b10f2e;
 }
 
 @media (min-width: 900px) {
+  .wrapper {
+    padding: 3rem 2rem;
+  }
+
   .imageList {
     height: 350px;
     width: 350px;
