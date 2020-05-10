@@ -1,3 +1,5 @@
+$red: hsla(349, 84%, 38%, 1);
+
 .section {
   position: relative;
   /*border: 1px solid orange;*/
@@ -5,18 +7,17 @@
 
 .sectionContentWrapper {
   padding: 0 1rem;
+
   /*border: 1px solid blue;*/
 }
 
 // the <h1>
 .sectionTitle {
-  /* text-align: right; */
   font-size: 2.5rem;
   letter-spacing: 1.2px;
   padding-top: 1rem;
   margin-top: 0;
   font-size: 3rem;
-
   font-weight: normal;
 
   /*border: 1px solid red;*/
@@ -29,49 +30,59 @@
   color: hsla(181, 24%, 26%, 1);
 }
 
-.aboutTextWrapper {
-  max-width: 400px;
-}
 .introText {
-  margin-top: 0;
+  margin: 0 0 1.5rem;
   max-width: 600px;
   line-height: 1.5;
   font-size: 1.2rem;
-
   position: relative;
-
   overflow: hidden;
 }
 
 .introText::before {
   content: "";
   position: absolute;
+  z-index: 10;
   width: 38%;
   height: 200px;
   top: 0;
   left: 20%;
   height: 200px;
   transform: skewX(65deg);
-
   background-color: hsla(181, 24%, 36%, 0.15);
 }
 
-// this is actually an <a>
-.amazonButton {
-  color: inherit;
-  text-decoration: none;
+// give both links position and z-index properties, so they will sit on top of the introText pseudo element
+.introText a {
   display: inline-block;
-  padding: 0 6px;
-  margin-bottom: 0.6rem;
-  border: 1px solid hsla(349, 84%, 38%, 1);
-  font-size: inherit;
+  text-decoration: none;
+  position: relative;
+  z-index: 50;
+  color: inherit;
   transition: all 0.3s ease;
 }
 
-.amazonButton:hover,
-.amazonButton:focus {
+// this is actually an <a>, styled to look like a button
+.amazonButton {
+  display: inline-block;
+  border-radius: 1000px;
+  padding: 0 8px;
+  margin-bottom: 0.6rem;
+  border: 1px solid $red;
+  font-size: inherit;
+}
+
+.amazonButton:hover {
   color: white;
-  background-color: hsla(349, 84%, 38%, 1);
+  background-color: $red;
+}
+
+.introText a:nth-of-type(2) {
+  text-decoration: underline;
+}
+
+.introText a:nth-of-type(2):hover {
+  color: $red;
 }
 
 .albumDetails {
@@ -81,17 +92,8 @@
   background-color: hsla(181, 24%, 26%, 0.075);
 }
 
-.piece {
-  /* margin-right: 1.5rem; */
-}
-
-:is(.piece) p {
-  margin-top: 0.4rem;
-}
-
-// <h2>
-.pieceTitle {
-  font-size: 1.4rem;
+// the <figure> element
+.albumWrapper {
   margin: 0;
 }
 
@@ -101,13 +103,23 @@
 
   transition: all 0.3s ease;
 }
-.albumWrapper:hover img {
-  /*
+.albumWrapper img:hover {
   -webkit-filter: brightness(40%);
-*/
 
   /* change this. only filter when hovering on the image */
 }
+
+// <h2>
+.pieceTitle {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.piece p {
+  margin-top: 0.4rem;
+}
+
+/* ========== MEDIA QUERIES ========== */
 
 @media (min-width: 600px) {
   .section::before {
@@ -117,8 +129,7 @@
     right: 1rem;
     height: 100%;
     width: 5rem;
-
-    background-color: hsla(181, 24%, 36%, 0.5);
+    background-color: hsla(181, 24%, 36%, 0.65);
   }
 }
 
