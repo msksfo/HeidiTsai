@@ -26,7 +26,7 @@ const DiscographyPage = () => (
             with personality, and love the sound of the fortepiano, this CD can
             be purchased from Amazon in Germany.{" "}
             <a
-              href=""
+              href="https://www.amazon.de/s?k=heidi+tsai&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1"
               target="_blank"
               rel="noopener noreferrer"
               className={discographyStyles.amazonButton}
@@ -34,31 +34,34 @@ const DiscographyPage = () => (
               Buy from Amazon
             </a>
             <br />
-            Read about the conception of this recording here.
+            Read about the conception of this recording{" "}
+            <a
+              href="https://www.funk-stiftung.org/de/projekte/kultur/heidi-tsai-burgmueller-schuncke-hummel/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </a>
+            .
           </p>
 
           <div className={discographyStyles.newAlbumIntro}>
             {/* 
-            <p className={discographyStyles.introText}>
-              Dear friends in Europe: this is my latest recording which was
-              released last autumn. If you like to discover unknown repertoire
-              with personality, and love the sound of the fortepiano, this CD
-              can be purchased from Amazon in Germany.
-            </p>
+           
              <p className={discographyStyles.aboutStudio}>
                    To read more
-                  about the multi-Grammy winning recording studio who produced
-                  this CD, meet b-sharp music and media solutions.
+                  about the multi-Grammy winning recording studio who produced both of
+                  these CD's, meet b-sharp music and media solutions.
                 </p>
           */}
 
-            <div className={discographyStyles.albumWrapper}>
+            <figure className={discographyStyles.albumWrapper}>
               <img
                 className={discographyStyles.albumFrontCover}
                 src={albumFrontCover}
                 alt="Album front cover"
               />
-            </div>
+            </figure>
             <div>
               <div className={discographyStyles.albumDetails}>
                 <div className={discographyStyles.piece}>
