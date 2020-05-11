@@ -5,8 +5,8 @@ import Album from "../components/album/album"
 import Piece from "../components/piece/piece"
 
 import albumFrontCover from "../assets/images/cdFront.png"
+import barcelonaBarroc from "../assets/images/barcelonaBarroc.png"
 //////import albumBackCover from "../assets/images/cdBack.png"
-import keyboard from "../assets/images/keyboard3.jpg"
 
 import discographyStyles from "../styles/discography.module.scss"
 import cs from "classnames"
@@ -96,7 +96,7 @@ const DiscographyPage = () => (
           />
 
           <Album
-            imageUrl="https://static.wixstatic.com/media/0fe1cc_0da90acfdcb24ca6aa0c9ce0efed3751~mv2.jpg/v1/fill/w_1020,h_564,al_c,q_85,usm_0.66_1.00_0.01/SPhotoEditor-20190508_102957_edited_edit.webp"
+            imageUrl={barcelonaBarroc}
             caption={
               <div>
                 <p>
