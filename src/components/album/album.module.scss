@@ -35,17 +35,6 @@ $red: hsla(349, 84%, 38%, 1);
   margin-top: auto;
 }
 
-.studioLink {
-  display: inline-block;
-  text-decoration: underline;
-  color: inherit;
-  transition: all 0.3s ease;
-}
-
-.studioLink:hover {
-  color: $red;
-}
-
 .albumImageWrapper img {
   width: 100%;
   max-width: 400px;
@@ -79,9 +68,5 @@ $red: hsla(349, 84%, 38%, 1);
     border-left: 4px double hsla(181, 24%, 26%, 1);
     margin-left: 0.5rem;
     background: linear-gradient(to right, hsla(181, 24%, 26%, 0.075), #fff);
-  }
-
-  .amazonButton {
-    margin-top: 0;
   }
 }
