@@ -68,7 +68,7 @@ $lightBlue: rgba(233, 230, 253, 0.85);
 /* ======== MEDIA QUERIES ========= */
 @media (min-width: 500px) {
   .coachingSessionWrapper {
-    border: 1px solid purple;
+    border: 4px double #ccc;
     padding: 50px 0 65px;
   }
 
@@ -97,7 +97,8 @@ $lightBlue: rgba(233, 230, 253, 0.85);
 
   /* this is the <h2> */
   .sessionType {
-    //display: none;
+    // ?does applying visibility hidden vs display none help screen reader users?
+
     visibility: hidden;
     height: 0;
     width: 0;
@@ -130,6 +131,6 @@ $lightBlue: rgba(233, 230, 253, 0.85);
 @media (min-width: 1100px) {
   .coachingSessionWrapper {
     justify-content: space-evenly;
-    padding: 50px 0 65px;
+    padding: 80px 0 95px;
   }
 }
