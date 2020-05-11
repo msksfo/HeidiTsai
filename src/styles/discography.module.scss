@@ -51,7 +51,7 @@ $red: hsla(349, 84%, 38%, 1);
   background-color: hsla(181, 24%, 36%, 0.15);
 }
 
-// give the introText link position and z-index properties, so it will sit on top of the introText pseudo element
+// give the introText <a> position and z-index properties, so it will sit on top of the introText pseudo element
 .introText a {
   display: inline-block;
   text-decoration: underline;
@@ -63,9 +63,13 @@ $red: hsla(349, 84%, 38%, 1);
 
 .introText a:hover {
   color: $red;
+  text-decoration: none;
 }
 
-// this is actually an <a>, styled to look like a button
+/* 
+  2 <a> elements have this class, (styled to look like a button)
+  the first links to amazon. the second is an internal link to the listen section on the same page
+ */
 .amazonButton {
   text-decoration: none;
   color: inherit;
@@ -77,9 +81,29 @@ $red: hsla(349, 84%, 38%, 1);
   margin-top: 0.5rem;
 }
 
+.amazonButton:first-of-type {
+  margin-right: 0.5rem;
+}
+
 .amazonButton:hover {
   color: white;
   background-color: $red;
+}
+
+.studioLink {
+  display: inline-block;
+  text-decoration: underline;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.studioLink:hover {
+  color: $red;
+  text-decoration: none;
+}
+
+.listen {
+  border: 1px solid orange;
 }
 
 /* ========== MEDIA QUERIES ========== */
