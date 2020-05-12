@@ -7,9 +7,8 @@ import Piece from "../components/piece/piece"
 import albumFrontCover from "../assets/images/cdFront.png"
 import barcelonaBarroc from "../assets/images/barcelonaBarroc.png"
 //////import albumBackCover from "../assets/images/cdBack.png"
-
-import discographyStyles from "../styles/discography.module.scss"
 import cs from "classnames"
+import discographyStyles from "../styles/discography.module.scss"
 
 //import SEO from "../components/seo"
 
@@ -46,14 +45,20 @@ const DiscographyPage = () => (
           <Album
             imageUrl={albumFrontCover}
             caption={
-              <a
-                href="https://www.amazon.de/s?k=heidi+tsai&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={discographyStyles.amazonButton}
-              >
-                Buy from Amazon
-              </a>
+              <div>
+                <a
+                  href="https://www.amazon.de/s?k=heidi+tsai&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={discographyStyles.amazonButton}
+                >
+                  Buy from Amazon
+                </a>
+
+                <a href="#listen" className={discographyStyles.amazonButton}>
+                  Listen to excerpts
+                </a>
+              </div>
             }
             pieces={
               <div>
@@ -159,6 +164,60 @@ const DiscographyPage = () => (
               </div>
             }
           />
+
+          <section id="listen" className={discographyStyles.listen}>
+            <div className={discographyStyles.listenContentWrapper}>
+              <div className={discographyStyles.iframeContainer}>
+                <iframe
+                  className={discographyStyles.iframe}
+                  src="https://www.youtube.com/embed/jmor57xlPbM?rel=0"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+
+              <div className={discographyStyles.iframeContainer}>
+                <iframe
+                  className={cs(
+                    discographyStyles.iframe,
+                    discographyStyles.soundcloud
+                  )}
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/616668237&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                ></iframe>
+              </div>
+
+              <div className={discographyStyles.iframeContainer}>
+                <iframe
+                  className={cs(
+                    discographyStyles.iframe,
+                    discographyStyles.soundcloud
+                  )}
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/616664976&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                ></iframe>
+              </div>
+
+              <div className={discographyStyles.iframeContainer}>
+                <iframe
+                  className={cs(
+                    discographyStyles.iframe,
+                    discographyStyles.soundcloud
+                  )}
+                  scrolling="no"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/173148393&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                ></iframe>
+              </div>
+            </div>
+            <div></div>
+          </section>
         </div>
       </section>
     </Layout>
