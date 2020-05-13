@@ -155,18 +155,38 @@ $red: hsla(349, 84%, 38%, 1);
   .sectionContentWrapper {
     padding: 0 2rem;
   }
-}
 
-@media (min-width: 1050px) {
   .listen {
     display: grid;
     grid-template-columns: 800px 1fr;
 
-    // #467172
-    background-color: #f2f7f7;
-    background-color: #fbfbfb;
+    /* gradient from gradientmagic.com */
+    background-image: repeating-radial-gradient(
+        circle at center center,
+        transparent 0px,
+        transparent 13px,
+        rgba(0, 0, 0, 0.05) 13px,
+        rgba(0, 0, 0, 0.05) 24px,
+        transparent 24px,
+        transparent 62px,
+        rgba(0, 0, 0, 0.05) 62px,
+        rgba(0, 0, 0, 0.05) 96px
+      ),
+      repeating-radial-gradient(
+        circle at center center,
+        rgb(255, 255, 255) 0px,
+        rgb(255, 255, 255) 14px,
+        rgb(255, 255, 255) 14px,
+        rgb(255, 255, 255) 18px,
+        rgb(255, 255, 255) 18px,
+        rgb(255, 255, 255) 28px,
+        rgb(255, 255, 255) 28px,
+        rgb(255, 255, 255) 32px
+      );
+    background-size: 21px 21px;
   }
 
+  /* 
   .listenContentWrapper {
     clip-path: polygon(
       0 0,
@@ -214,4 +234,5 @@ $red: hsla(349, 84%, 38%, 1);
       0 100%
     );
   }
+  */
 }
