@@ -159,6 +159,7 @@ $red: hsla(349, 84%, 38%, 1);
   .listen {
     display: grid;
     grid-template-columns: 800px 1fr;
+    margin-top: 100px;
 
     /* gradient from gradientmagic.com */
     background-image: repeating-radial-gradient(
