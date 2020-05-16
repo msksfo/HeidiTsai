@@ -8,7 +8,17 @@ class Header extends Component {
     super()
     this.state = {
       isOpen: false,
+      ariaExpanded: false,
     }
+  }
+
+  toggleMenu = () => {
+    this.setState(prevState => {
+      return {
+        isOpen: !prevState.isOpen,
+        ariaExpanded: !prevState.ariaExpanded,
+      }
+    })
   }
 
   render() {
@@ -24,45 +34,69 @@ class Header extends Component {
           <span className={headerStyles.subtitle}>Historical Keyboardist</span>
         </Link>
 
-        <label
-          htmlFor="nav-toggle"
-          //tabIndex="0"
-          className={headerStyles.navToggleLabel}
+        <button
+          title="menu"
+          id="menuButton"
+          aria-label="Mobile navigation button"
+          aria-expanded={this.state.ariaExpanded}
+          aria-controls="site-navigation"
+          className={headerStyles.menuButton}
+          onClick={this.toggleMenu}
         >
-          <span></span>
-        </label>
+          <span aria-hidden="true" className={headerStyles.menuIcon}></span>
+        </button>
 
-        <input
-          type="checkbox"
-          id="nav-toggle"
-          className={headerStyles.navToggle}
-        ></input>
-
-        <nav className={headerStyles.headerNav}>
+        <nav
+          role="navigation"
+          id="site-navigation"
+          className={cs(headerStyles.headerNav, {
+            [headerStyles.headerNavShowing]: this.state.isOpen,
+          })}
+        >
           <ul className={headerStyles.navList}>
             <li className={headerStyles.navItem}>
-              <Link to="/about" className={headerStyles.link}>
+              <Link
+                to="/about"
+                className={cs(headerStyles.link, {
+                  [headerStyles.linksShowing]: this.state.isOpen,
+                })}
+              >
                 {" "}
                 about
               </Link>
             </li>
 
             <li className={headerStyles.navItem}>
-              <Link to="/coaching" className={headerStyles.link}>
+              <Link
+                to="/coaching"
+                className={cs(headerStyles.link, {
+                  [headerStyles.linksShowing]: this.state.isOpen,
+                })}
+              >
                 {" "}
                 coaching
               </Link>
             </li>
 
             <li className={headerStyles.navItem}>
-              <Link to="/discography" className={headerStyles.link}>
+              <Link
+                to="/discography"
+                className={cs(headerStyles.link, {
+                  [headerStyles.linksShowing]: this.state.isOpen,
+                })}
+              >
                 {" "}
                 discography
               </Link>
             </li>
 
             <li className={headerStyles.navItem}>
-              <Link to="/contact" className={headerStyles.link}>
+              <Link
+                to="/contact"
+                className={cs(headerStyles.link, {
+                  [headerStyles.linksShowing]: this.state.isOpen,
+                })}
+              >
                 {" "}
                 contact
               </Link>
@@ -73,57 +107,5 @@ class Header extends Component {
     )
   }
 }
-
-/*
-const Header = props => {
-  return (
-    <header
-      className={cs(headerStyles.header, {
-        [headerStyles.homePageHeader]: props.page === "home",
-      })}
-    >
-      <Link to="/" className={(headerStyles.link, headerStyles.logo)}>
-        {" "}
-        <span className={headerStyles.title}>Heidi Tsai</span>
-        <span className={headerStyles.subtitle}>Historical Keyboardist</span>
-      </Link>
-
-      <input type="checkbox" className={headerStyles.navToggle}></input>
-
-      <nav className={headerStyles.headerNav}>
-        <ul className={headerStyles.navList}>
-          <li className={headerStyles.navItem}>
-            <Link to="/about" className={headerStyles.link}>
-              {" "}
-              about
-            </Link>
-          </li>
-
-          <li className={headerStyles.navItem}>
-            <Link to="/coaching" className={headerStyles.link}>
-              {" "}
-              coaching
-            </Link>
-          </li>
-
-          <li className={headerStyles.navItem}>
-            <Link to="/discography" className={headerStyles.link}>
-              {" "}
-              discography
-            </Link>
-          </li>
-
-          <li className={headerStyles.navItem}>
-            <Link to="/contact" className={headerStyles.link}>
-              {" "}
-              contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
-    </header>
-  )
-}
-*/
 
 export default Header
