@@ -16,7 +16,7 @@ import footerStyles from "../footer/footer.module.scss"
 const Footer = () => {
   return (
     <div className={footerStyles.wrapper}>
-      <div className={footerStyles.footerNav}>
+      <nav role="navigation" className={footerStyles.footerNav}>
         <div>
           <ul className={footerStyles.footerNavRight}>
             <li>
@@ -118,7 +118,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-      </div>
+      </nav>
 
       <small className={footerStyles.copyright}>
         © {new Date().getFullYear()} Heidi Tsai. All Rights Reserved
