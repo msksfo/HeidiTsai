@@ -17,10 +17,15 @@ import Footer from "../footer/footer"
 const Layout = props => {
   return (
     <div className={layoutStyles.wrapper}>
-      <Header page={props.page} />
+      <a href="#main" className={layoutStyles.skipLink}>
+        Skip to content
+      </a>
+      <Header />
 
       <div className={layoutStyles.mainWrapper}>
-        <main className={layoutStyles.main}>{props.children}</main>
+        <main id="main" className={layoutStyles.main}>
+          {props.children}
+        </main>
       </div>
 
       <Footer />

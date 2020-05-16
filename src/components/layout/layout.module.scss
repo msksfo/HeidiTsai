@@ -5,6 +5,22 @@
   flex-direction: column;
 }
 
+.skipLink {
+  position: absolute;
+  transform: translateY(-100%);
+  transition: 0.3s;
+
+  &:focus {
+    transform: translateY(0);
+    position: static;
+    display: inline-block;
+    padding: 5px;
+
+    font-size: 1.2rem;
+    color: #333;
+  }
+}
+
 .mainWrapper {
   flex: 1;
 
