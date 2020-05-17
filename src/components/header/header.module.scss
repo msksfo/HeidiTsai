@@ -179,7 +179,8 @@ $red: #b10f2e;
     opacity: 1;
   }
 
-  .link:hover {
+  .link:hover,
+  .link:focus {
     color: black;
     background-color: white;
   }
