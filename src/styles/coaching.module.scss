@@ -31,15 +31,10 @@
   margin: 0;
   font-size: 3rem;
   padding: 50px 1rem;
-
   width: 100%;
   text-align: center;
-
   background: linear-gradient(to bottom, transparent, rgba(37, 17, 177, 0.4));
-
   color: white;
-
-  /*color: #2511b1;*/
 }
 
 .creativitySpan {
@@ -87,6 +82,12 @@
 .aboutCoachingText {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+.paypalButton {
+  display: flex;
+  justify-content: center;
+  margin: 100px 1rem 50px;
 }
 
 @media (min-width: 900px) {

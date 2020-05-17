@@ -28,15 +28,9 @@ img {
 }
 
 .video-container {
-  /*
-  position: relative;
-  padding-bottom: "56.25%"; 
-  height: 0;
-  */
   position: relative;
   display: flex;
   justify-content: center;
-
   overflow: hidden;
 }
 
@@ -47,8 +41,5 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-
-  background-color: rgba(29, 19, 31, 0.1);
-
   background-color: rgba(0, 0, 0, 0.1);
 }

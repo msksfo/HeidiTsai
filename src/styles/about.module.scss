@@ -1,19 +1,13 @@
 $red: #b10f2e;
 
 .wrapper {
-  /*border-top: 1px solid rgba(0, 0, 0, 0.1);*/
-  padding: 3rem 1rem;
-
   padding: 3rem 0;
 }
 
 .sectionTitle {
   display: flex;
   flex-direction: column;
-  padding-bottom: 3rem;
-
   margin-bottom: 50px;
-
   padding: 0 1rem 3rem 1rem;
 }
 
@@ -88,23 +82,6 @@ $red: #b10f2e;
     visibility: visible;
   }
 }
-
-/* =================== not being used =================== */
-.sectionDividerImage {
-  padding: 100px 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  background-color: #fbfbfb;
-
-  display: none;
-}
-
-.harpsichordImage {
-  max-width: 100%;
-  display: block;
-}
-/* ======================================================= */
 
 .sectionContent {
   display: flex;
@@ -222,12 +199,6 @@ $red: #b10f2e;
 }
 
 @media (min-width: 850px) {
-  /*
-  .wrapper {
-    padding: 3rem 2rem;
-  }
-  */
-
   .sectionTitle {
     flex-direction: row;
     justify-content: space-between;
