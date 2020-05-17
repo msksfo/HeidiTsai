@@ -32,14 +32,6 @@ const AboutPage = () => (
           </div>
         </div>
 
-        <div className={aboutStyles.sectionDividerImage}>
-          <img
-            className={aboutStyles.harpsichordImage}
-            alt="harpsichord"
-            src={harpsichord}
-          />
-        </div>
-
         <div className={aboutStyles.sectionContent}>
           <div className={aboutStyles.aboutText}>
             <p>
