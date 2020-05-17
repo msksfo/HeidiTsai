@@ -36,7 +36,6 @@ class Header extends Component {
 
         <button
           title="menu"
-          id="menuButton"
           aria-label="Mobile navigation button"
           aria-expanded={this.state.ariaExpanded}
           aria-controls="site-navigation"
@@ -47,8 +46,6 @@ class Header extends Component {
         </button>
 
         <nav
-          role="navigation"
-          id="site-navigation"
           className={cs(headerStyles.headerNav, {
             [headerStyles.headerNavShowing]: this.state.isOpen,
           })}
