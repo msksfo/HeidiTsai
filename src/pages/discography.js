@@ -172,6 +172,7 @@ const DiscographyPage = () => (
                   className={discographyStyles.iframe}
                   src="https://www.youtube.com/embed/jmor57xlPbM?rel=0"
                   frameborder="0"
+                  title="Burgmueller/Hummel/Schuncke (Album Trailer)"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -183,6 +184,7 @@ const DiscographyPage = () => (
                     discographyStyles.iframe,
                     discographyStyles.soundcloud
                   )}
+                  title="Domenico Scarlatti, Sonata in D major, k. 492"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
@@ -196,6 +198,7 @@ const DiscographyPage = () => (
                     discographyStyles.iframe,
                     discographyStyles.soundcloud
                   )}
+                  title="Froberger Fantasia sopra Ut, Re, Mi, Fa, Sol, La"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
@@ -209,6 +212,7 @@ const DiscographyPage = () => (
                     discographyStyles.iframe,
                     discographyStyles.soundcloud
                   )}
+                  title="Mozart K. 271 I. Allegro Heidi Tsai- fortepiano"
                   scrolling="no"
                   frameborder="no"
                   allow="autoplay"
