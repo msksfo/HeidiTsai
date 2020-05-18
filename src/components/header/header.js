@@ -31,7 +31,7 @@ class Header extends Component {
         <Link to="/" className={(headerStyles.link, headerStyles.logo)}>
           {" "}
           <span className={headerStyles.title}>Heidi Tsai</span>
-          <span className={headerStyles.subtitle}>Historical Keyboardist</span>
+          <span className={headerStyles.subtitle}>historical keyboardist</span>
         </Link>
 
         <button
