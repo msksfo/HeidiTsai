@@ -3,9 +3,7 @@ $red: hsla(349, 84%, 38%, 1);
 /* turn each album into a component? */
 .albumWrapper {
   margin-bottom: 4rem;
-  /*
-  border: 1px solid purple;
-  */
+
   border-left: 4px double hsla(181, 24%, 26%, 1);
   padding-left: 0.5rem;
 }
@@ -29,8 +27,11 @@ $red: hsla(349, 84%, 38%, 1);
 
 .figcaption {
   max-width: 400px;
+
   font-size: 1.2rem;
-  line-height: 1.5;
+  font-weight: 300;
+  line-height: 1.6;
+
   margin-top: 0.8rem;
   margin-top: auto;
 }
