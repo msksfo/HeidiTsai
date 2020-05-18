@@ -29,17 +29,20 @@
 
 .heroText {
   margin: 0;
-  font-size: 3rem;
   padding: 50px 1rem;
   width: 100%;
   text-align: center;
   background: linear-gradient(to bottom, transparent, rgba(37, 17, 177, 0.4));
   color: white;
+
+  font-family: "Dancing Script", cursive;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
 }
 
 .creativitySpan {
   color: #b10f6f;
-  font-size: 3.5rem;
+  font-size: 4.2rem;
 }
 
 @keyframes fadeIn {
@@ -65,7 +68,6 @@
 
 .titleHeader {
   margin-bottom: 1.4rem;
-  font-size: 1.7rem;
 }
 
 .titleHeader::after {
@@ -82,6 +84,7 @@
 .aboutCoachingText {
   font-size: 1.2rem;
   line-height: 1.6;
+  font-weight: 300;
 }
 
 .paypalButton {
