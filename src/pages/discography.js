@@ -19,9 +19,9 @@ const DiscographyPage = () => (
       <section className={discographyStyles.section}>
         <div className={discographyStyles.sectionContentWrapper}>
           <h1 className={discographyStyles.sectionTitle}>
-            <span>the latest</span>
+            <span className={discographyStyles.subtitle}>the latest</span>
             <br />
-            Watch, Listen, Shop
+            <span className={discographyStyles.title}>Watch, Listen, Shop</span>
           </h1>
 
           <p className={discographyStyles.introText}>
