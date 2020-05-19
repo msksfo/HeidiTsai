@@ -15,10 +15,9 @@ $red: hsla(349, 84%, 38%, 1);
   margin-top: 0;
   font-size: 1.6rem;
   font-weight: 300;
-  position: relative;
 }
 
-.sectionTitle span {
+.subtitle {
   font-size: 1.7rem;
   display: inline-block;
   margin-bottom: 0.3rem;
@@ -73,10 +72,8 @@ $red: hsla(349, 84%, 38%, 1);
   display: inline-block;
   padding: 8px;
   border: 1px solid $red;
-
   font-size: 1.1rem;
   font-weight: 300;
-
   transition: all 0.3s ease;
   margin-top: 0.5rem;
 }
@@ -127,6 +124,27 @@ $red: hsla(349, 84%, 38%, 1);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* ===== Animations, not applied until 900px breakpoint ===== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* ========== MEDIA QUERIES ========== */
 
 @media (min-width: 600px) {
@@ -135,7 +153,7 @@ $red: hsla(349, 84%, 38%, 1);
     font-weight: 300;
   }
 
-  .sectionTitle span {
+  .subtitle {
     margin-bottom: 0;
   }
 }
@@ -165,6 +183,15 @@ $red: hsla(349, 84%, 38%, 1);
 
   .sectionTitle {
     font-size: 2.2rem;
+  }
+
+  .title {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1rem);
+
+    animation: slideUp 1.2s ease-out forwards 0.5s,
+      fadeIn 1.2s ease-in forwards 0.5s;
   }
 
   .listen {
