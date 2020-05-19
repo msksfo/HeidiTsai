@@ -13,14 +13,14 @@ $red: hsla(349, 84%, 38%, 1);
   letter-spacing: 1.2px;
   padding-top: 1rem;
   margin-top: 0;
-
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 300;
 }
 
 .sectionTitle span {
   font-size: 1.7rem;
   display: inline-block;
+  margin-bottom: 0.3rem;
   font-weight: bold;
   color: hsla(181, 24%, 26%, 1);
 }
@@ -128,6 +128,17 @@ $red: hsla(349, 84%, 38%, 1);
 
 /* ========== MEDIA QUERIES ========== */
 
+@media (min-width: 600px) {
+  .sectionTitle {
+    font-size: 1.9rem;
+    font-weight: 300;
+  }
+
+  .sectionTitle span {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: 700px) {
   .section::before {
     content: "";
@@ -137,10 +148,6 @@ $red: hsla(349, 84%, 38%, 1);
     height: 100%;
     width: 5rem;
     background-color: hsla(181, 24%, 36%, 0.5);
-  }
-
-  .sectionTitle {
-    font-size: 2.4rem;
   }
 }
 
@@ -153,6 +160,10 @@ $red: hsla(349, 84%, 38%, 1);
 @media (min-width: 900px) {
   .sectionContentWrapper {
     padding: 0 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
   }
 
   .listen {
