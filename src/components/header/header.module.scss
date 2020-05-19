@@ -34,23 +34,24 @@ $red: #b10f2e;
 
 // Heidi Tsai
 .title {
-  font-size: 1.9rem;
-  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+
+  margin-bottom: 0.2rem;
   color: $black;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-
-  font-weight: 500;
-
+  font-weight: 900;
   transition: color 0.2s ease-in;
 }
 
 // historical keyboardist
 .subtitle {
   font-family: "Dancing Script", cursive;
-  font-size: 1.6rem;
-  letter-spacing: 3px;
+
+  font-size: 1.5rem;
+  letter-spacing: 2px;
   color: $black;
+
   transition: color 0.2s ease-in;
 }
 
