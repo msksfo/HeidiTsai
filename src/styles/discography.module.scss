@@ -5,7 +5,7 @@ $red: hsla(349, 84%, 38%, 1);
 }
 
 .sectionContentWrapper {
-  padding: 0 1rem;
+  padding: 1rem 1rem 0;
 }
 
 // the <h1>
@@ -15,6 +15,7 @@ $red: hsla(349, 84%, 38%, 1);
   margin-top: 0;
   font-size: 1.6rem;
   font-weight: 300;
+  position: relative;
 }
 
 .sectionTitle span {
@@ -159,7 +160,7 @@ $red: hsla(349, 84%, 38%, 1);
 
 @media (min-width: 900px) {
   .sectionContentWrapper {
-    padding: 0 2rem;
+    padding: 2rem 2rem 0;
   }
 
   .sectionTitle {
