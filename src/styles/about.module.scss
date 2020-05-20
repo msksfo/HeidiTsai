@@ -94,9 +94,7 @@ $red: #b10f2e;
 
   /* use position relative so position sticky will work on .sectionImages */
   position: relative;
-
   background-color: #fbfbfb;
-
   padding: 1rem;
 }
 
@@ -212,6 +210,16 @@ $red: #b10f2e;
 
   .titleQuote {
     text-align: left;
+  }
+
+  .titleImage {
+    margin-bottom: 0;
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 850px) and (prefers-reduced-motion: no-preference) {
+  .titleQuote {
     transform: translateY(40px);
     opacity: 0;
     animation: slideUp 2s ease-in-out forwards 0.5s,
@@ -219,9 +227,6 @@ $red: #b10f2e;
   }
 
   .titleImage {
-    margin-bottom: 0;
-    margin-right: 3rem;
-
     transform: translateX(-100%);
     visibility: hidden;
     animation: slideIn 1.5s forwards ease-out 0.5s;
