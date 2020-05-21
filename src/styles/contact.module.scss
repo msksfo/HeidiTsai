@@ -15,7 +15,8 @@
 
 .media {
   display: inline-block;
-  margin-left: 1rem;
+  margin: 0 1rem;
+
   padding: 2rem;
   max-width: 400px;
   transform: translateY(-50px);
@@ -71,6 +72,6 @@
 
 @media (min-width: 900px) {
   .media {
-    margin-left: 2rem;
+    margin: 0 2rem;
   }
 }
