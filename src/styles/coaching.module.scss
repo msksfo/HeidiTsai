@@ -2,10 +2,9 @@
   background-image: url("../assets/images/abstractArtBackground.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
   height: 500px;
-
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -18,12 +17,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: flex-end;
-
-  background: linear-gradient(to top, transparent, rgba(37, 17, 177, 0.8));
   background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
 }
 
