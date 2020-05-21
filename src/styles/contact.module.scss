@@ -1,13 +1,55 @@
 .wrapper {
-  padding: 1rem 1rem;
+  padding-bottom: 50px;
   background-color: #ffffff;
   background-image: url("../assets/images/contactPageBackgroundImage.png");
   background-repeat: repeat;
 }
 
+.wrapper::before {
+  content: "";
+  display: block;
+  height: 100px;
+  background-color: rgba(70, 113, 114, 1);
+  background-image: url("../assets/images/contactPageBackgroundImage.png");
+}
+
+.media {
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 2rem;
+  max-width: 400px;
+  transform: translateY(-50px);
+  background-color: #f2f7f7;
+
+  outline: 5px solid white;
+  //outline: 5px solid #d3e4e4;
+
+  outline-offset: -15px;
+}
+
+.media > p {
+  margin-top: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.media > a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  background-color: rgba(70, 113, 114, 0.4);
+}
+
+.media > a:hover {
+  background-color: rgba(70, 113, 114, 0.2);
+}
+
 .formWrapper {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 1rem;
   border-radius: 0.5rem;
 
   /* needed for the border-radius to work */
@@ -15,11 +57,20 @@
 }
 
 @media (min-width: 700px) {
-  .wrapper {
-    padding: 5rem 1rem;
-  }
   .formWrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media (min-width: 850px) {
+  .formWrapper {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .media {
+    margin-left: 2rem;
   }
 }

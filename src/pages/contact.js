@@ -13,6 +13,20 @@ const ContactPage = () => (
     <Layout>
       <Head title="Contact" />
       <div className={contactStyles.wrapper}>
+        <div className={contactStyles.media}>
+          <p>
+            To promoters and concert organizers, high resolution photos can be
+            found on Dropbox.
+          </p>
+          <a
+            href="https://www.dropbox.com/sh/ccnrq4da70jvud1/AAAR3KyOa8lbbTys5vM1dQaHa?dl=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Opens new tab"
+          >
+            See media assets
+          </a>
+        </div>
         <div className={contactStyles.formWrapper}>
           <HeidiInfo />
 
