@@ -1,5 +1,4 @@
 import React from "react"
-
 import Head from "../components/head"
 import Layout from "../components/layout/layout"
 
@@ -16,11 +15,13 @@ const CoachingPage = () => (
       <Head title="Coaching" />
       <div className={coachingStyles.wrapper}>
         <div className={coachingStyles.heroImageContainer}>
-          <h1 className={coachingStyles.heroText}>
-            Embodied{" "}
-            <span className={coachingStyles.creativitySpan}>Creativity</span>{" "}
-            Coaching
-          </h1>
+          <div className={coachingStyles.heroTextContainer}>
+            <h1 className={coachingStyles.heroText}>
+              Embodied{" "}
+              <span className={coachingStyles.creativitySpan}>Creativity</span>{" "}
+              Coaching
+            </h1>
+          </div>
         </div>
 
         <section className={coachingStyles.aboutSection}>
