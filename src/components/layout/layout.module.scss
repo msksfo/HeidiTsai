@@ -28,8 +28,4 @@
     If .wrapper above is flex-direction column, AND this div has a max-widtth with margin 0 auto, the width will shrink to content size. To prevent that, you must use width 100%, with max-width / margin 0 auto.
   */
   width: 100%;
-  /*
-  max-width: 1600px;  FIGURE OUT WHAT THE MAX WIDTH SHOULD BE 
-  margin: 0 auto;
-*/
 }
