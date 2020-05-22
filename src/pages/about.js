@@ -118,7 +118,7 @@ class AboutPage extends Component {
               </div>
             </div>
 
-            <div className={aboutStyles.sectionContent}>
+            <article className={aboutStyles.sectionContent}>
               <div className={aboutStyles.aboutText}>
                 <p>
                   <strong>Heidi Tsai</strong>, equally expressive on the
@@ -201,7 +201,7 @@ class AboutPage extends Component {
                   </li>
                 </ul>
               </div>
-            </div>
+            </article>
           </section>
         </Layout>
       </div>
