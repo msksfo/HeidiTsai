@@ -85,7 +85,7 @@ class AboutPage extends Component {
 
   componentWillUnmount() {
     clearInterval(this.interval)
-    console.log(window)
+
     window.removeEventListener("resize", this.updatePhotos)
   }
 
