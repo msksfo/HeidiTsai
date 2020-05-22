@@ -24,81 +24,83 @@ const DiscographyPage = () => (
             <span className={discographyStyles.title}>Watch, Listen, Shop</span>
           </h1>
 
-          <p className={discographyStyles.introText}>
-            Dear friends in Europe: this is my latest recording which was
-            released last autumn. If you like to discover unknown repertoire
-            with personality, and love the sound of the fortepiano, this CD can
-            be purchased from Amazon in Germany. For friends who live in other
-            parts of the world, please contact me through the form on the
-            contact page, if you are interested in a copy. <br /> <br />
-            Read about the conception of this recording{" "}
-            <a
-              href="https://www.funk-stiftung.org/de/projekte/kultur/heidi-tsai-burgmueller-schuncke-hummel/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              here
-            </a>
-            .
-          </p>
+          <article>
+            <p className={discographyStyles.introText}>
+              Dear friends in Europe: this is my latest recording which was
+              released last autumn. If you like to discover unknown repertoire
+              with personality, and love the sound of the fortepiano, this CD
+              can be purchased from Amazon in Germany. For friends who live in
+              other parts of the world, please contact me through the form on
+              the contact page, if you are interested in a copy. <br /> <br />
+              Read about the conception of this recording{" "}
+              <a
+                href="https://www.funk-stiftung.org/de/projekte/kultur/heidi-tsai-burgmueller-schuncke-hummel/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                here
+              </a>
+              .
+            </p>
 
-          <Album
-            imageUrl={albumFrontCover}
-            caption={
-              <div>
-                <a
-                  href="https://www.amazon.de/s?k=heidi+tsai&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={discographyStyles.amazonButton}
-                >
-                  Buy from Amazon
-                </a>
+            <Album
+              imageUrl={albumFrontCover}
+              caption={
+                <div>
+                  <a
+                    href="https://www.amazon.de/s?k=heidi+tsai&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={discographyStyles.amazonButton}
+                  >
+                    Buy from Amazon
+                  </a>
 
-                <a href="#listen" className={discographyStyles.amazonButton}>
-                  Listen to excerpts
-                </a>
-              </div>
-            }
-            pieces={
-              <div>
-                <Piece
-                  composer="Norbert Burgmuller"
-                  title="Piano Sonata F minor, op. 8"
-                  movements={
-                    <p>
-                      I. Allegro molto <br />
-                      II. Romanze <br />
-                      III. Finale. Allegro molto e con fuoco
-                    </p>
-                  }
-                />
-                <Piece
-                  composer="Ludwig Schunke"
-                  title="Piano Sonata G minor, op. 3"
-                  movements={
-                    <p>
-                      I. Allegro <br />
-                      II. Scherzo. Molto Allegro <br />
-                      III. Andante sostenuto <br />
-                      IV. Finale. Allegro
-                    </p>
-                  }
-                />
-                <Piece
-                  composer="Johan Nepomuk Hummel"
-                  title=" Piano Sonata #5 in F# minor, op. 81"
-                  movements={
-                    <p>
-                      I. Allegro <br />
-                      II. Largo con molt'espressione <br />
-                      III. Vivace
-                    </p>
-                  }
-                />
-              </div>
-            }
-          />
+                  <a href="#listen" className={discographyStyles.amazonButton}>
+                    Listen to excerpts
+                  </a>
+                </div>
+              }
+              pieces={
+                <div>
+                  <Piece
+                    composer="Norbert Burgmuller"
+                    title="Piano Sonata F minor, op. 8"
+                    movements={
+                      <p>
+                        I. Allegro molto <br />
+                        II. Romanze <br />
+                        III. Finale. Allegro molto e con fuoco
+                      </p>
+                    }
+                  />
+                  <Piece
+                    composer="Ludwig Schunke"
+                    title="Piano Sonata G minor, op. 3"
+                    movements={
+                      <p>
+                        I. Allegro <br />
+                        II. Scherzo. Molto Allegro <br />
+                        III. Andante sostenuto <br />
+                        IV. Finale. Allegro
+                      </p>
+                    }
+                  />
+                  <Piece
+                    composer="Johan Nepomuk Hummel"
+                    title=" Piano Sonata #5 in F# minor, op. 81"
+                    movements={
+                      <p>
+                        I. Allegro <br />
+                        II. Largo con molt'espressione <br />
+                        III. Vivace
+                      </p>
+                    }
+                  />
+                </div>
+              }
+            />
+          </article>
 
           <Album
             imageUrl={barcelonaBarroc}
@@ -156,18 +158,18 @@ const DiscographyPage = () => (
 
           <section id="listen" className={discographyStyles.listen}>
             <div className={discographyStyles.listenContentWrapper}>
-              <div className={discographyStyles.iframeContainer}>
+              <article className={discographyStyles.iframeContainer}>
                 <iframe
                   className={discographyStyles.iframe}
                   src="https://www.youtube.com/embed/jmor57xlPbM?rel=0"
-                  frameborder="0"
+                  frameBorder="0"
                   title="Burgmueller/Hummel/Schuncke (Album Trailer)"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
-              </div>
+              </article>
 
-              <div className={discographyStyles.iframeContainer}>
+              <article className={discographyStyles.iframeContainer}>
                 <iframe
                   className={cs(
                     discographyStyles.iframe,
@@ -175,13 +177,13 @@ const DiscographyPage = () => (
                   )}
                   title="Domenico Scarlatti, Sonata in D major, k. 492"
                   scrolling="no"
-                  frameborder="no"
+                  frameBorder="no"
                   allow="autoplay"
                   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/616668237&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
                 ></iframe>
-              </div>
+              </article>
 
-              <div className={discographyStyles.iframeContainer}>
+              <article className={discographyStyles.iframeContainer}>
                 <iframe
                   className={cs(
                     discographyStyles.iframe,
@@ -189,13 +191,13 @@ const DiscographyPage = () => (
                   )}
                   title="Froberger Fantasia sopra Ut, Re, Mi, Fa, Sol, La"
                   scrolling="no"
-                  frameborder="no"
+                  frameBorder="no"
                   allow="autoplay"
                   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/616664976&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
                 ></iframe>
-              </div>
+              </article>
 
-              <div className={discographyStyles.iframeContainer}>
+              <article className={discographyStyles.iframeContainer}>
                 <iframe
                   className={cs(
                     discographyStyles.iframe,
@@ -203,13 +205,12 @@ const DiscographyPage = () => (
                   )}
                   title="Mozart K. 271 I. Allegro Heidi Tsai- fortepiano"
                   scrolling="no"
-                  frameborder="no"
+                  frameBorder="no"
                   allow="autoplay"
                   src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/173148393&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
                 ></iframe>
-              </div>
+              </article>
             </div>
-            <div></div>
           </section>
         </div>
       </section>
