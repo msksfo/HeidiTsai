@@ -21,6 +21,7 @@ class AboutPage extends Component {
   constructor(props) {
     super()
     this.state = {
+      isMobile: window.innerWidth < 800,
       currentIndex: 0,
       images: [
         heidi2,
@@ -38,14 +39,42 @@ class AboutPage extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(this.changeImage, 10000)
+    // only add the rotating images in if the window width is at least 800px
+    if (!this.state.isMobile) {
+      this.interval = setInterval(this.changeImage, 10000)
+    }
+
+    window.addEventListener("resize", this.updatePhotos)
+  }
+
+  updatePhotos = () => {
+    let state = { ...this.state }
+
+    // only setState if window width has gone from < 800 to >= 800 or vice versa.
+    if (state.isMobile !== window.innerWidth < 800) {
+      this.setState(prevState => {
+        // if isMobile has gone from true to false, start the interval to rotate images.
+        if (prevState.isMobile > (window.innerWidth < 800)) {
+          this.interval = setInterval(this.changeImage, 10000)
+
+          // or if isMobile has gone from false to true, clear the interval.
+        } else if (prevState.isMobile < (window.innerWidth < 800)) {
+          clearInterval(this.interval)
+        }
+
+        return {
+          ...this.state,
+          isMobile: window.innerWidth < 800,
+        }
+      })
+    }
   }
 
   componentWillUnmount() {
     clearInterval(this.interval)
+    window.removeEventListener("resize", this.updatePhotos)
   }
 
-  // callback to be passed to intersection observer?
   changeImage = () => {
     let index = this.state.currentIndex
 
