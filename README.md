@@ -16,6 +16,8 @@ This is the website I created for Heidi Tsai, historical keyboardist based in Fr
 - Coaching page hero [image by Amber Lamoreaux from Pexels](https://www.pexels.com/photo/multicolored-abstract-art-2062637/)
 - Discography page, listen section gradient background by [Gradient Magic](http://gradientmagic.com)
 - Contact page, Climpek background pattern by [transparenttextures.com](https://transparenttextures.com)
+- Roboto and Dancing Script fonts by [Google Fonts](https://fonts.google.com)
+- Social media icons by [Font Awesome](https://fontawesome.com)
 
 ## About Gatsby
 
