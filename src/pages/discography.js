@@ -150,17 +150,6 @@ const DiscographyPage = () => (
                     </p>
                   }
                 />
-                <Piece
-                  composer="Johan Nepomuk Hummel"
-                  title=" Piano Sonata #5 in F# minor, op. 81"
-                  movements={
-                    <p>
-                      I. Allegro <br />
-                      II. Largo con molt'espressione <br />
-                      III. Vivace
-                    </p>
-                  }
-                />
               </div>
             }
           />
