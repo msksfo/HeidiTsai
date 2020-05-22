@@ -9,7 +9,6 @@ import {
   faInstagram,
   faSoundcloud,
 } from "@fortawesome/free-brands-svg-icons"
-//import { faYoutubeSquare } from "@fortawesome/free-solid-svg-icons"
 
 import footerStyles from "../footer/footer.module.scss"
 
