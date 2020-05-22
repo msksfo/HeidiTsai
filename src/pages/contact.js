@@ -12,7 +12,7 @@ const ContactPage = () => (
   <div>
     <Layout>
       <Head title="Contact" />
-      <div className={contactStyles.wrapper}>
+      <section className={contactStyles.wrapper}>
         <div className={contactStyles.media}>
           <p>
             To promoters and concert organizers, high resolution photos can be
@@ -32,7 +32,7 @@ const ContactPage = () => (
 
           <ContactForm />
         </div>
-      </div>
+      </section>
     </Layout>
   </div>
 )
