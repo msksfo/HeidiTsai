@@ -21,7 +21,8 @@ class AboutPage extends Component {
   constructor(props) {
     super()
     this.state = {
-      isMobile: window.innerWidth < 800,
+      //isMobile: window.innerWidth < 800,
+      isMobile: false,
       currentIndex: 0,
       images: [
         heidi2,
@@ -39,12 +40,25 @@ class AboutPage extends Component {
   }
 
   componentDidMount() {
+    let windowSize = this.getWindowSize()
+    // !this.state.isMobile
+
     // only add the rotating images in if the window width is at least 800px
-    if (!this.state.isMobile) {
+    if (!windowSize) {
+      console.log("not mobile. starting interval")
       this.interval = setInterval(this.changeImage, 10000)
     }
 
     window.addEventListener("resize", this.updatePhotos)
+  }
+
+  getWindowSize = () => {
+    this.setState({
+      isMobile: window.innerWidth < 800,
+    })
+
+    // because setState is asynchronous, and I need this value immediately
+    return window.innerWidth < 800
   }
 
   updatePhotos = () => {
@@ -72,6 +86,7 @@ class AboutPage extends Component {
 
   componentWillUnmount() {
     clearInterval(this.interval)
+    console.log(window)
     window.removeEventListener("resize", this.updatePhotos)
   }
 
