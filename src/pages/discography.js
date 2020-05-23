@@ -129,6 +129,17 @@ const DiscographyPage = () => (
               <div>
                 <Piece
                   composer="Johann Sebastian Bach"
+                  title="Brandenburg Concerto No. 5"
+                  movements={
+                    <p>
+                      I. Allegro <br />
+                      II. Affettuoso <br />
+                      III. Allegro
+                    </p>
+                  }
+                />
+                <Piece
+                  composer="Johann Sebastian Bach"
                   title="Concerto in A minor for Harpsichord, Flute, and
                     Violin, BWV 1044"
                   movements={
