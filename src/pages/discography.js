@@ -152,7 +152,7 @@ const DiscographyPage = () => (
                 />
                 <Piece
                   composer=" Georg Muffat"
-                  title="String Sonata in G major"
+                  title="Armonico Tributo, concerto &aacute; 5"
                   movements={
                     <p>
                       I. Allemande <br />
